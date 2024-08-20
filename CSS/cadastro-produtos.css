@@ -1,0 +1,143 @@
+.corpo-site {
+    float: right;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao_categoria {
+    margin-left: 50px;
+}
+
+.categoria {
+    display: flex;
+}
+
+.bi {
+    font-size: 1.5rem;
+}
+
+
+.table {
+    border-radius: 10px;
+}
+
+.table th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table td {
+    text-align: center; 
+    vertical-align: middle; 
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd;
+}
+
+.valor {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu {
+    position: absolute; 
+    background-color: #fff; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 10px 20px; 
+}
+
+.dropdown-item:hover {
+    background-color: #eee; 
+    cursor: pointer; 
+}
+
+svg {
+    height: 1.5rem;
+    fill: #3cff00;
+}
+
+.icon_tipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+  
+@media (max-width: 845px) {
+    .corpo-site {
+        float: none;
+    }
+    
+    .titulo {
+        font-size: 20px;
+    }
+    
+    .botao_categoria {
+      margin-left: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table td:nth-child(2) {
+        display: none;
+    }
+    
+    .table th:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .corpo-site {
+        margin-left: 130px;
+    }
+}
+
+@media (min-width: 1090px) {
+    .corpo-site {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .corpo-site {
+        margin-left: 130px;
+    }
+}
+
+@media (min-width: 1270px) {
+    .corpo-site {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .corpo-site {
+        margin-left: 130px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .corpo-site {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .corpo-site {
+        float: none;
+        margin: auto;
+    }
+}

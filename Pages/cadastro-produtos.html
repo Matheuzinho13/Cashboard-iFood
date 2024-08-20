@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <!-- link font-awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- css da tela -->
+  <link rel="stylesheet" href="../CSS/cadastro-produtos.css">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Produtos</title>
+</head>
+
+<body>
+    <script id="replace_with_navbar" src="../JS/nav.js"></script>
+    
+    <div class="corpo-site">
+      <!-- Titulo -->
+      <div class="container pt-4"> 
+        <div class="row"> 
+          <div class="col-12 col-md-9 col-lg-6">
+            <h1 class="titulo d-inline me-3">Cardápio</h1> 
+            <a href="#" class="text-danger" onclick="abrirModalAlterarOrdem()">Alterar ordem</a> 
+          </div>
+          <div class="col-12 col-md-3"> 
+          <button class="botao_categoria btn btn-outline-danger mt-2 mt-md-0" onclick="abrirModalAdicionarCategoria()">+ Categoria</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="containerCategorias">
+        <!-- Categoria Menu Principal -->
+        <div id="categoria-1">
+          <div class="container pt-5"> 
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h2 class="titulo" id="nome-categoria">
+                  <span id="nome-categoria-texto">Menu Principal</span> 
+                  <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-categoria-texto')"></i>
+                </h2>
+              </div>
+              <div class="categoria col-12 col-md-4 justify-content-between">
+                <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-1')">+ Item</button>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-1" onchange="toggleStatus(this)" checked>
+                  <label class="form-check-label" for="categoria-status-1">Ativo</label>
+                </div>
+                <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-1')"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-4 col-lg-12 pe-4"> 
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/costela.png" alt="Costela" class="me-2">Costela
+                  </td>
+                  <td>Uma deliciosa costela bovina, assada lentamente para garantir a suculência e o sabor intenso. A carne se desfaz na boca, proporcionando uma experiência culinária inesquecível.</td>
+                  <td>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-2" onchange="toggleStatus(this)" checked>
+                      <label class="form-check-label" for="categoria-status-2">Ativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 49,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-1"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-1">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-1')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-1')">Excluir</a></li>
+                    </ul>
+                  </td> 
+                </tr>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/legumes_a_vapor.png" alt="Legumes a Vapor" class="me-2">Legumes a Vapor
+                  </td>
+                  <td>Uma seleção colorida de legumes frescos, cozidos a vapor para preservar seus nutrientes e sabores naturais. Uma opção leve e saudável que complementa qualquer prato.</td>
+                  <td>
+                    <div class="icon_tipo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m268.25,60.99c-74.92,0 -138.3,46.67 -159.84,111.02c32.03,-15.41 68.15,-24.02 106.46,-24.02l83.88,0c8.39,0 15.25,6.53 15.25,14.5s-6.86,14.5 -15.25,14.5l-15.25,0l-68.63,0s0,0 0,0c-15.82,0 -31.17,1.72 -46.04,4.89c-24.69,5.35 -47.56,14.86 -68.05,27.82c0,0 0,0 0,0c-55.28,35.07 -91.79,94.98 -91.79,163.04l0,14.5c0,12.05 10.2,21.75 22.88,21.75s22.88,-9.7 22.88,-21.75l0,-14.5c0,-44.14 19.73,-83.83 51.28,-111.65c18.87,68.42 84.35,118.9 162.22,118.9l0.95,0c125.91,-0.63 227.8,-118.63 227.8,-264.09c0,-38.61 -7.15,-75.31 -20.11,-108.39c-2.48,-6.25 -12.1,-5.98 -15.44,-0.09c-17.92,31.9 -53.38,53.56 -94.07,53.56l-99.13,0z" id="svg_1" transform="matrix(1 0 0 1 0 0)"/>
+                        <text fill="#000000" font-family="Serif" font-size="70" id="svg_2" stroke-width="0" text-anchor="middle" x="256" xml:space="preserve" y="467.6">VEGETARIANO</text>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m467,31.38c0,93.63 -69.73,171.03 -160.06,182.98c-5.85,-44.01 -25.22,-83.74 -53.82,-114.81c31.57,-56.38 91.9,-94.54 161.13,-94.54l26.37,0c14.59,0 26.37,11.79 26.37,26.37zm-422,52.75c0,-14.59 11.79,-26.37 26.37,-26.37l26.37,0c101.96,0 184.62,82.67 184.62,184.62l0,26.37l0,131.87c0,14.59 -11.79,26.37 -26.37,26.37s-26.37,-11.79 -26.37,-26.37l0,-131.87c-101.96,0 -184.62,-82.67 -184.62,-184.62z" id="svg_1"/>
+                        <text fill="#000000" font-family="Serif" font-size="80" id="svg_2" stroke-width="0" style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
+                      </svg>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-3" onchange="toggleStatus(this)" checked>
+                      <label class="form-check-label" for="categoria-status-3">Ativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 24,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-2"></i> 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-2">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-2')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-2')">Excluir</a></li>
+                    </ul>
+                  </td> 
+                </tr>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/fritas.png" alt="Fritas" class="me-2">Fritas
+                  </td>
+                  <td>Batatas crocantes por fora e macias por dentro, fritas em óleo quente até atingirem a perfeição dourada. Servidas quentes e salgadas, são o acompanhamento perfeito para qualquer refeição.</td>
+                  <td>
+                    <div class="icon_tipo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m268.25,60.99c-74.92,0 -138.3,46.67 -159.84,111.02c32.03,-15.41 68.15,-24.02 106.46,-24.02l83.88,0c8.39,0 15.25,6.53 15.25,14.5s-6.86,14.5 -15.25,14.5l-15.25,0l-68.63,0s0,0 0,0c-15.82,0 -31.17,1.72 -46.04,4.89c-24.69,5.35 -47.56,14.86 -68.05,27.82c0,0 0,0 0,0c-55.28,35.07 -91.79,94.98 -91.79,163.04l0,14.5c0,12.05 10.2,21.75 22.88,21.75s22.88,-9.7 22.88,-21.75l0,-14.5c0,-44.14 19.73,-83.83 51.28,-111.65c18.87,68.42 84.35,118.9 162.22,118.9l0.95,0c125.91,-0.63 227.8,-118.63 227.8,-264.09c0,-38.61 -7.15,-75.31 -20.11,-108.39c-2.48,-6.25 -12.1,-5.98 -15.44,-0.09c-17.92,31.9 -53.38,53.56 -94.07,53.56l-99.13,0z" id="svg_1" transform="matrix(1 0 0 1 0 0)"/>
+                        <text fill="#000000" font-family="Serif" font-size="70" id="svg_2" stroke-width="0" text-anchor="middle" x="256" xml:space="preserve" y="467.6">VEGETARIANO</text>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m467,31.38c0,93.63 -69.73,171.03 -160.06,182.98c-5.85,-44.01 -25.22,-83.74 -53.82,-114.81c31.57,-56.38 91.9,-94.54 161.13,-94.54l26.37,0c14.59,0 26.37,11.79 26.37,26.37zm-422,52.75c0,-14.59 11.79,-26.37 26.37,-26.37l26.37,0c101.96,0 184.62,82.67 184.62,184.62l0,26.37l0,131.87c0,14.59 -11.79,26.37 -26.37,26.37s-26.37,-11.79 -26.37,-26.37l0,-131.87c-101.96,0 -184.62,-82.67 -184.62,-184.62z" id="svg_1"/>
+                        <text fill="#000000" font-family="Serif" font-size="80" id="svg_2" stroke-width="0" style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
+                      </svg>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-4" onchange="toggleStatus(this)">
+                      <label class="form-check-label" for="categoria-status-4">Inativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 21,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-3"></i> 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-3">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-3')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-3')">Excluir</a></li>
+                    </ul>
+                  </td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Categoria Sobremesa -->
+        <div id="categoria-2">
+          <div class="container pt-5"> 
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h2 class="titulo" id="nome-sobremesa">
+                  <span id="nome-sobremesa-texto">Sobremesa</span>
+                  <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-sobremesa-texto')"></i>
+                </h2>
+              </div>
+              <div class="categoria col-12 col-md-4 justify-content-between">
+                <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-2')">+ Item</button>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-5" onchange="toggleStatus(this)">
+                  <label class="form-check-label" for="categoria-status-5">Inativo</label>
+                </div>
+                <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-2')"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-4 col-lg-12 pe-4"> 
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/havanna_thunder.png" alt="Havanna Thunder" class="me-2">Havanna Thunder
+                  </td>
+                  <td>Um brownie de chocolate rico e denso, coberto com uma generosa bola de sorvete de baunilha cremoso. Uma combinação clássica que é ao mesmo tempo refrescante e indulgente.</td>
+                  <td>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-6" onchange="toggleStatus(this)">
+                      <label class="form-check-label" for="categoria-status-6">Inativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 26,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-4"></i> 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-4">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-4')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-4')">Excluir</a></li>
+                    </ul>
+                  </td>  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Categoria Bebidas -->
+        <div id="categoria-3">
+          <div class="container pt-5"> 
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h2 class="titulo" id="nome-bebidas">
+                  <span id="nome-bebidas-texto">Bebidas</span>
+                  <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-bebidas-texto')"></i>
+                </h2>
+              </div>
+              <div class="categoria col-12 col-md-4 justify-content-between">
+                <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-3')">+ Item</button>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-7" onchange="toggleStatus(this)" checked>
+                  <label class="form-check-label" for="categoria-status-7">Ativo</label>
+                </div>
+                <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-3')"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-4 col-lg-12 pe-4"> 
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/chopp_colorado.png" alt="Chopp Colorado" class="me-2">Chopp Colorado
+                  </td>
+                  <td>Uma cerveja artesanal de alta qualidade, com um sabor robusto e um acabamento suave. Servida gelada para realçar seus sabores complexos e notas de malte.</td>
+                  <td>
+                    <div class="icon_tipo">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+                        <text fill="#3cff00" font-family="Times" font-size="400" id="svg_3" stroke="#000000" stroke-width="0" text-anchor="middle" x="250" xml:space="preserve" y="387.6">18</text>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m268.25,60.99c-74.92,0 -138.3,46.67 -159.84,111.02c32.03,-15.41 68.15,-24.02 106.46,-24.02l83.88,0c8.39,0 15.25,6.53 15.25,14.5s-6.86,14.5 -15.25,14.5l-15.25,0l-68.63,0s0,0 0,0c-15.82,0 -31.17,1.72 -46.04,4.89c-24.69,5.35 -47.56,14.86 -68.05,27.82c0,0 0,0 0,0c-55.28,35.07 -91.79,94.98 -91.79,163.04l0,14.5c0,12.05 10.2,21.75 22.88,21.75s22.88,-9.7 22.88,-21.75l0,-14.5c0,-44.14 19.73,-83.83 51.28,-111.65c18.87,68.42 84.35,118.9 162.22,118.9l0.95,0c125.91,-0.63 227.8,-118.63 227.8,-264.09c0,-38.61 -7.15,-75.31 -20.11,-108.39c-2.48,-6.25 -12.1,-5.98 -15.44,-0.09c-17.92,31.9 -53.38,53.56 -94.07,53.56l-99.13,0z" id="svg_1" transform="matrix(1 0 0 1 0 0)"/>
+                        <text fill="#000000" font-family="Serif" font-size="70" id="svg_2" stroke-width="0" text-anchor="middle" x="256" xml:space="preserve" y="467.6">VEGETARIANO</text>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="m467,31.38c0,93.63 -69.73,171.03 -160.06,182.98c-5.85,-44.01 -25.22,-83.74 -53.82,-114.81c31.57,-56.38 91.9,-94.54 161.13,-94.54l26.37,0c14.59,0 26.37,11.79 26.37,26.37zm-422,52.75c0,-14.59 11.79,-26.37 26.37,-26.37l26.37,0c101.96,0 184.62,82.67 184.62,184.62l0,26.37l0,131.87c0,14.59 -11.79,26.37 -26.37,26.37s-26.37,-11.79 -26.37,-26.37l0,-131.87c-101.96,0 -184.62,-82.67 -184.62,-184.62z" id="svg_1"/>
+                        <text fill="#000000" font-family="Serif" font-size="80" id="svg_2" stroke-width="0" style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
+                      </svg>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-8" onchange="toggleStatus(this)" checked>
+                      <label class="form-check-label" for="categoria-status-8">Ativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 11,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-5"></i> 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-5">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-5')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-5')">Excluir</a></li>
+                    </ul>
+                  </td> 
+                </tr>
+                <tr>
+                  <td>
+                    <img src="../Imagens/Cadastro Produto/super_milkshake.png" alt="Super Milkshake" class="me-2">Super Milkshake
+                  </td>
+                  <td>Um milkshake cremoso e espesso, disponível nos sabores de chocolate ou morango. Feito com sorvete premium e servido com um canudo largo para que você possa saborear cada gole.</td>
+                  <td>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-9" onchange="toggleStatus(this)">
+                      <label class="form-check-label" for="categoria-status-9">Inativo</label>
+                    </div>
+                  </td>
+                  <td><span class="valor">R$ 14,99</span></td>
+                  <td>
+                    <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-6"></i> 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-6">
+                      <li><a class="dropdown-item" href="#" onclick="abrirModalEditarItem('dropdownMenuButton-6')">Editar</a></li> 
+                      <li><a class="dropdown-item" href="#" onclick="excluirItem('dropdownMenuButton-6')">Excluir</a></li>
+                    </ul>
+                  </td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Janela Modal de Alterar Ordem -->
+      <div class="modal fade" id="modalAlterarOrdem" tabindex="-1" aria-labelledby="modalAlterarOrdemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAlterarOrdemLabel">Cardápio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Para mudar a ordem do cardápio ou item basta arrastar para a posição desejada.</p>
+              <div class="row">
+                <div class="col-6 mb-auto">
+                  <h4 class="mb-3">Categorias</h4>
+                  <ul class="list-group" id="listaCategorias">
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h4 class="mb-3">Itens</h4>
+                  <ul class="list-group" id="listaItens">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Janela Modal para Adicionar Categoria -->
+      <div class="modal fade" id="modalAdicionarCategoria" tabindex="-1" aria-labelledby="modalAdicionarCategoriaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAdicionarCategoriaLabel">Adicionar Categoria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="nomeCategoria" class="form-label">Nome da Categoria:</label>
+                <input type="text" class="form-control" id="nomeCategoria">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="inserirCategoria" onclick="inserirCategoria()" data-bs-dismiss="modal">Inserir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Janela Modal para Adicionar Item -->
+      <div class="modal fade" id="modalAdicionarItem" tabindex="-1" aria-labelledby="modalAdicionarItemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAdicionarItemLabel">Adicionar Item</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="formAdicionarItem">
+                <div class="mb-3">
+                  <label for="fotoItem" class="form-label">Foto:</label>
+                  <input type="file" class="form-control" id="fotoItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="categoriaItem" class="form-label">Categoria:</label>
+                  <input type="text" class="form-control" id="categoriaItem" readonly>
+                </div>
+
+                <div class="mb-3">
+                  <label for="valorItem" class="form-label">Valor:</label>
+                  <input type="text" class="form-control" id="valorItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="nomeItem" class="form-label">Nome:</label>
+                  <input type="text" class="form-control" id="nomeItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="statusItem" class="form-label">Status:</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="statusItem" checked>
+                    <label class="form-check-label" for="statusItem">Ativo</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="descricaoItem" class="form-label">Descrição:</label>
+                  <textarea class="form-control" id="descricaoItem" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="porcaoItem" class="form-label">Porção:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="porcaoItem" id="porcaoIndividual" value="individual" checked>
+                    <label class="form-check-label" for="porcaoIndividual">Individual</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="porcaoItem" id="porcaoParaDois" value="paraDois">
+                    <label class="form-check-label" for="porcaoParaDois">Para dois</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="caracteristicasItem" class="form-label">Características:</label>
+                  <p class="text-muted">Marque a bolinha caso a resposta seja sim.</p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-18" value="18">
+                    <label class="form-check-label" for="caracteristica-18">
+                      Maior de 18 anos?
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-vegetariano" value="vegetariano">
+                    <label class="form-check-label" for="caracteristica-vegetariano">
+                      Vegetariano?
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-vegano" value="vegano">
+                    <label class="form-check-label" for="caracteristica-vegano">
+                      Vegano?
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="inserirItem" onclick="inserirItem()" data-bs-dismiss="modal">Inserir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Janela Modal de Confirmação para categoria -->
+      <div class="modal fade" id="modalConfirmacaoCategoria" tabindex="-1" aria-labelledby="modalConfirmacaoCategoriaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalConfirmacaoCategoriaLabel">Atenção</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="textoConfirmacaoCategoria">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+              <button type="button" class="btn btn-primary" id="confirmaExcluirCategoria">Sim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Janela Modal para Editar Item -->
+      <div class="modal fade" id="modalEditarItem" tabindex="-1" aria-labelledby="modalEditarItemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEditarItemLabel">Editar Item</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="formEditarItem">
+                <div class="mb-3">
+                  <label for="fotoItem" class="form-label">Foto:</label>
+                  <input type="file" class="form-control" id="fotoItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="categoriaItem" class="form-label">Categoria:</label>
+                  <input type="text" class="form-control" id="categoriaItem" readonly>
+                </div>
+
+                <div class="mb-3">
+                  <label for="valorItem" class="form-label">Valor:</label>
+                  <input type="text" class="form-control" id="valorItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="nomeItem" class="form-label">Nome:</label>
+                  <input type="text" class="form-control" id="nomeItem">
+                </div>
+
+                <div class="mb-3">
+                  <label for="statusItem" class="form-label">Status:</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="statusItem" checked>
+                    <label class="form-check-label" for="statusItem">Ativo</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="descricaoItem" class="form-label">Descrição:</label>
+                  <textarea class="form-control" id="descricaoItem" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="porcaoItem" class="form-label">Porção:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="porcaoItem" id="porcaoIndividual" value="individual" checked>
+                    <label class="form-check-label" for="porcaoIndividual">Individual</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="porcaoItem" id="porcaoParaDois" value="paraDois">
+                    <label class="form-check-label" for="porcaoParaDois">Para dois</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="caracteristicasItem" class="form-label">Características:</label>
+                  <p class="text-muted">Marque a bolinha caso a resposta seja sim.</p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-18" value="18">
+                    <label class="form-check-label" for="caracteristica-18">
+                      Maior de 18 anos?
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-vegetariano" value="vegetariano">
+                    <label class="form-check-label" for="caracteristica-vegetariano">
+                      Vegetariano?
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="caracteristica-vegano" value="vegano">
+                    <label class="form-check-label" for="caracteristica-vegano">
+                      Vegano?
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="editarItem" onclick="editarItem()" data-bs-dismiss="modal">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Janela Modal de Confirmação para item -->
+      <div class="modal fade" id="modalConfirmacaoItem" tabindex="-1" aria-labelledby="modalConfirmacaoItemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalConfirmacaoItemLabel">Atenção</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="textoConfirmacaoItem">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Não</button>
+              <button type="button" class="btn btn-primary" id="confirmaExcluirItem">Sim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <!-- link javascript -->
+    <script src="../JS/produto.js"></script>
+</body>
+
+</html>
