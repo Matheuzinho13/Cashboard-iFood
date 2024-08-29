@@ -59,7 +59,7 @@
     cursor: pointer; 
 }
 
-svg {
+.icon_tipo svg {
     height: 1.5rem;
     fill: #3cff00;
 }

@@ -21,7 +21,6 @@ header.container-fluid{
     align-items: center;
     position: fixed;
 }
-
 /* itens do header */
 .nav-item{
     display: flex;
@@ -145,6 +144,16 @@ header.container-fluid2{
 
 /* responsividade - some o header vertical e aparece o horizontal */
 @media(max-width:845px){
+    header.container-fluid2{
+        display: flex;
+    }
+
+    header.container-fluid{
+        display: none;
+    }
+}
+
+@media(min-width:1700px){
     header.container-fluid2{
         display: flex;
     }
