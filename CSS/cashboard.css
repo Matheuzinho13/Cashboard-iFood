@@ -1,0 +1,93 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --vermelho: #FF001B;
+    --branco: #fff;
+    --cinza: #EEEEEE;
+}
+
+body{
+    background-color: var(--cinza);
+}
+
+/* corpo do site flutuando na direita do header horizontal */
+.corpo-site{
+    float: right;
+}
+
+@media(max-width: 845px){
+    .corpo-site{
+        float:none;
+    }
+}
+
+@media(min-width: 1700px){
+    .corpo-site{
+        float:none;
+    }
+}
+/* conteúdo do corpo do site */
+.bemVindo{
+    background-color: var(--vermelho);
+    display: flex;
+    width: 190%;
+    height: 80%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 4px #727171;
+    padding: 0 2rem;
+    overflow: visible;
+}
+
+.esquerdaBemvindo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bemVindo h2{
+    font-size: 1rem;
+    color: var(--branco);
+}
+
+.bvBtn{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.bvBtn h1{
+    font-size: 1.8rem;
+    color: var(--branco);
+}
+
+.textosBV h1{
+    font-size: 1.8rem;
+    color: var(--branco);
+    font-weight: 600;
+    text-align: center;
+}
+
+.bvBtn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    font-size: 0.8rem;
+}
+
+.bvBtn button:hover{
+    background-color: var(--branco);
+    color: var(--vermelho);
+}
+
+.direitaBemvindo img{
+    width: 275px;
+    transform: translateY(-30px); /* Move a imagem para cima */
+    padding-left: 1rem;
+}
