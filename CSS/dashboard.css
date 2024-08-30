@@ -9,6 +9,7 @@
     --vermelho: #FF001B;
     --branco: #fff;
     --cinza: #EEEEEE;
+    --sombra: #727171;
 }
 
 body{
@@ -17,77 +18,156 @@ body{
 
 /* corpo do site flutuando na direita do header horizontal */
 .corpo-site{
-    float: right;
+    margin-left: 8.5rem;
 }
 
 @media(max-width: 845px){
     .corpo-site{
-        float:none;
+        margin-left: 0;
     }
 }
 
 @media(min-width: 1700px){
     .corpo-site{
-        float:none;
+        margin-left: 0;
     }
 }
-/* conteúdo do corpo do site */
+
+/* começo do corpo do site */
+/* --------------------------- BEM VINDO ----------------------------*/
 .bemVindo{
     background-color: var(--vermelho);
-    display: flex;
-    width: 190%;
-    height: 80%;
     border-radius: 30px;
-    box-shadow: 1px 1px 4px #727171;
-    padding: 0 2rem;
+    box-shadow: 1px 1px 4px var(--sombra);
+    padding: 1.8rem 0rem 0rem 1rem;
     overflow: visible;
 }
 
-.esquerdaBemvindo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.bemVindo h2{
-    font-size: 1rem;
+.textoBV1 h1 {
+    font-size: 2.1vw;
     color: var(--branco);
 }
 
-.bvBtn{
-    display: flex;
-    gap: 2.5rem;
+.botaoBV {
+    padding: 0;
+    cursor: pointer;
+    height: 3vw;
+    width: 7vw;
+    border-radius: 10px;
+    font-size: 1vw;
 }
 
-.bvBtn h1{
-    font-size: 1.8rem;
-    color: var(--branco);
-}
-
-.textosBV h1{
-    font-size: 1.8rem;
-    color: var(--branco);
-    font-weight: 600;
-    text-align: center;
-}
-
-.bvBtn button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.5rem;
-    border: 1px solid var(--branco);
-    color: var(--branco);
-    font-size: 0.8rem;
-}
-
-.bvBtn button:hover{
+.botaoBV:hover{
     background-color: var(--branco);
     color: var(--vermelho);
 }
 
-.direitaBemvindo img{
-    width: 275px;
-    transform: translateY(-30px); /* Move a imagem para cima */
-    padding-left: 1rem;
+.textoBV2 {
+    font-size: 2.1vw;
+    color: var(--branco);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.textoBV3 {
+    font-size: 1vw;
+    color: var(--branco);
+    margin: 0;
+}
+
+.direitaBemVindo img {
+    max-width: 100%;
+    margin-top: -60px;
+}
+
+/* ----------------------------- PERFIL -----------------------------*/
+.perfil {
+    background-color: var(--branco);
+    border-radius: 30px;
+    box-shadow: 1px 1px 4px var(--sombra);
+}
+
+.cimaPerfil {
+    background-color: var(--vermelho);
+    padding: 15px 15px 10px 15px;
+    margin: 0 -11px 10px -11px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 4px var(--sombra);
+}
+
+.cimaPerfil h1 {
+    font-size: 2.1vw;
+    color: var(--branco);
+}
+
+.cimaPerfil img {
+    width: 2vw;
+}
+
+.baixoPerfil h2 {
+    font-size: 1.5vw;
+}
+
+.baixoPerfil p {
+    font-size: 0.9vw;
+}
+
+.esquerdaBP .pt-2 {
+    color: #FF001B;
+    font-weight: 600;
+}
+
+.esquerdaBP > * {
+    text-align: center;
+}
+
+.linhaPerfil {
+    border-left: 2px solid rgba(255, 0, 0, 0.26); 
+    height: 4vw;
+}
+
+.direitaBP img {
+    max-width: 100%;
+}
+
+/* ---------------------------- PESQUISA ----------------------------*/
+.pesquisa {
+    background-color: var(--branco);
+}
+
+/* ------------------------------- MES ------------------------------*/
+.mes {
+    background-color: var(--vermelho);
+}
+
+/* ----------------------- RECEITAS X DESPESAS ----------------------*/
+.receitasDespesas {
+    background-color: var(--branco);
+}
+
+/* ------------------------ VOLUME X PEDIDOS  -----------------------*/
+.volumePedidos {
+    background-color: var(--branco);
+}
+
+/* ------------------ PRODUTO MAIS E MENOS VENDIDO ------------------*/
+.produtoMaisMenos {
+    background-color: var(--branco);
+}
+
+/* ---------------------- DESPESAS X CATEGORIA ----------------------*/
+.despesasCategoria {
+    background-color: var(--branco);
+}
+
+/* ---------------------- NUMERO DE AVALIACOES ----------------------*/
+.numeroAvaliacoes {
+    background-color: var(--branco);
+}
+
+/* ---------------------------- EXTRATO -----------------------------*/
+.extrato {
+    background-color: var(--vermelho);
 }

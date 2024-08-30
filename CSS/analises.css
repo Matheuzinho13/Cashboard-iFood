@@ -9,6 +9,7 @@
     --vermelho: #FF001B;
     --branco: #fff;
     --cinza: #EEEEEE;
+    --sombra: #727171;
 }
 
 body{
@@ -17,18 +18,19 @@ body{
 
 /* corpo do site flutuando na direita do header horizontal */
 .corpo-site{
-    float: right;
+    margin-left: 8.5rem;
 }
 
 @media(max-width: 845px){
     .corpo-site{
-        float:none;
+        margin-left: 0;
     }
 }
 
 @media(min-width: 1700px){
     .corpo-site{
-        float:none;
+        margin-left: 0;
     }
 }
+
 /* conteúdo do corpo do site */
