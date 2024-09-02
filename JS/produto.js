@@ -72,7 +72,7 @@ function inserirCategoria() {
           </h2>
         </div>
         <div class="categoria col-12 col-md-4 justify-content-between">
-          <button class="btn btn-outline-danger">+ Item</button>
+          <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-${categoriaCount + 1}')">+ Item</button>
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-${categoriaCount + 1}" onchange="toggleStatus(this)" checked>
             <label class="form-check-label" for="categoria-status-${categoriaCount + 1}">Ativo</label>
@@ -162,6 +162,18 @@ function excluirCategoria(idCategoria) {
     categoria.remove();
     modal.hide();
   });
+}
+
+function abrirModalEditarItem(idItem) {
+  // Seleciona a linha do item na tabela
+  const linhaItem = document.getElementById(idItem).closest('tr');
+
+  // Define o ID do item na modal
+  document.getElementById('editarItem').dataset.itemId = idItem;
+
+  // Mostra a modal
+  const modal = new bootstrap.Modal(document.getElementById('modalEditarItem'));
+  modal.show();
 }
 
 function excluirItem(idItem) {
