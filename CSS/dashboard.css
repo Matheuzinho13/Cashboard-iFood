@@ -10,6 +10,7 @@
     --branco: #fff;
     --cinza: #EEEEEE;
     --sombra: #727171;
+    --preto: #000;
 }
 
 body{
@@ -18,7 +19,7 @@ body{
 
 /* corpo do site flutuando na direita do header horizontal */
 .corpo-site{
-    margin-left: 8.5rem;
+    margin-left: 8.5rem; /* Espaço suficiente para evitar o header */
 }
 
 @media(max-width: 845px){
@@ -33,53 +34,65 @@ body{
     }
 }
 
-/* começo do corpo do site */
-/* --------------------------- BEM VINDO ----------------------------*/
+/* conteúdo do corpo do site */
+/* ----------------------------- PERFIL -----------------------------*/
 .bemVindo{
     background-color: var(--vermelho);
+    display: flex;
     border-radius: 30px;
     box-shadow: 1px 1px 4px var(--sombra);
-    padding: 1.8rem 0rem 0rem 1rem;
+    padding: 0 2rem;
     overflow: visible;
 }
 
-.textoBV1 h1 {
+.esquerdaBemvindo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bemVindo h2{
+    font-size: 1.2vw;
+    color: var(--branco);
+}
+
+.bvBtn{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.bvBtn h1{
     font-size: 2.1vw;
     color: var(--branco);
 }
 
-.botaoBV {
-    padding: 0;
-    cursor: pointer;
-    height: 3vw;
-    width: 7vw;
-    border-radius: 10px;
-    font-size: 1vw;
-}
-
-.botaoBV:hover{
-    background-color: var(--branco);
-    color: var(--vermelho);
-}
-
-.textoBV2 {
+.textosBV h1{
     font-size: 2.1vw;
     color: var(--branco);
     font-weight: 600;
     text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
 }
 
-.textoBV3 {
-    font-size: 1vw;
+.bvBtn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    width: 7vw;
+    border: 1px solid var(--branco);
     color: var(--branco);
-    margin: 0;
+    font-size: 1vw;
+    padding: 0;
 }
 
-.direitaBemVindo img {
+.bvBtn button:hover{
+    background-color: var(--branco);
+    color: var(--vermelho);
+}
+
+.direitaBemvindo img{
     max-width: 100%;
-    margin-top: -60px;
+    margin-top: -30px;
 }
 
 /* ----------------------------- PERFIL -----------------------------*/
@@ -91,10 +104,11 @@ body{
 
 .cimaPerfil {
     background-color: var(--vermelho);
-    padding: 15px 15px 10px 15px;
+    padding: 1rem;
     margin: 0 -11px 10px -11px;
     border-radius: 30px;
     box-shadow: 1px 1px 4px var(--sombra);
+    display: flex;
 }
 
 .cimaPerfil h1 {
@@ -102,8 +116,17 @@ body{
     color: var(--branco);
 }
 
-.cimaPerfil img {
-    width: 2vw;
+.cimaPerfil i {
+    font-size: 2vw;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.baixoPerfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
 }
 
 .baixoPerfil h2 {
@@ -114,60 +137,167 @@ body{
     font-size: 0.9vw;
 }
 
-.esquerdaBP .pt-2 {
-    color: #FF001B;
-    font-weight: 600;
+.esquerdaPerfil{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.esquerdaBP > * {
+.localizacao{
+    display: flex;
+}
+
+.dadosRestaurante{
+    display: flex;
+    justify-content: center;
+}
+
+.dadosRestaurante .pt-2 {
+    color: var(--vermelho);
+    font-weight: 600;
     text-align: center;
 }
 
 .linhaPerfil {
     border-left: 2px solid rgba(255, 0, 0, 0.26); 
-    height: 4vw;
+    height: 3.5vw;
 }
 
-.direitaBP img {
-    max-width: 100%;
-}
 
 /* ---------------------------- PESQUISA ----------------------------*/
 .pesquisa {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.pesquisa input {
+    border: none;
+    font-size: 1.5vw;
+}
+
+.textoPesquisa::placeholder{
+    color: rgba(117, 113, 113, 0.7);
+}
+
+.pesquisa button {
+    border: none;
+    color: var(--vermelho);
+    font-size: 1.5vw;
+}
+
+.pesquisa button:hover {
+    color: var(--branco);
+    background-color: var(--vermelho);
 }
 
 /* ------------------------------- MES ------------------------------*/
 .mes {
     background-color: var(--vermelho);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.mes h1 {
+    font-size: 2.1vw;
+    color: var(--branco);
+}
+
+.mes select{
+    width: 35%;
+    height: 3vw;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: none;
+    color: var(--branco);
+}
+
+.form-select option{
+    color: var(--preto);
+}
+
+/* ---------------------------- GRÁFICOS ----------------------------*/
+.cimaGraficos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cimaGraficos h1 {
+    font-size: 1.2vw;
+    color: var(--vermelho);
+}
+
+.cimaGraficos select{
+    font-size: 0.7vw;
+    padding: 0 0 0 5px;
+    width: 30%;
+    height: 2vw;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: none;
+    color: var(--preto);
+}
+
+.imagemGrafico {
+    display: flex;
+    margin: 0 auto;
 }
 
 /* ----------------------- RECEITAS X DESPESAS ----------------------*/
 .receitasDespesas {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
 }
 
 /* ------------------------ VOLUME X PEDIDOS  -----------------------*/
 .volumePedidos {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
 }
 
 /* ------------------ PRODUTO MAIS E MENOS VENDIDO ------------------*/
 .produtoMaisMenos {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
 }
 
 /* ---------------------- DESPESAS X CATEGORIA ----------------------*/
 .despesasCategoria {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
 }
 
 /* ---------------------- NUMERO DE AVALIACOES ----------------------*/
 .numeroAvaliacoes {
     background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
 }
 
 /* ---------------------------- EXTRATO -----------------------------*/
 .extrato {
     background-color: var(--vermelho);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.extrato h1 {
+    font-size: 2vw;
+    text-align: center;
+    color: var(--branco);
 }
