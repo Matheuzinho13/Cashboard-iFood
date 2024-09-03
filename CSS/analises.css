@@ -34,3 +34,130 @@ body{
 }
 
 /* conteúdo do corpo do site */
+/* --------------------------- CIMA DO SITE --------------------------- */
+.cimaAnalises {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cimaAnalises .dropdown {
+    margin-right: 7rem;
+}
+
+/* --------------------------- BAIXO DO SITE --------------------------- */
+/* ------------------ PRODUTO MAIS E MENOS VENDIDOS ------------------- */
+.produtoMaisMenos {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+}
+
+/* ---------------------------- GRÁFICOS ----------------------------*/
+.cimaGraficos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cimaGraficos h1 {
+    font-size: 1.2vw;
+    color: var(--vermelho);
+}
+
+.cimaGraficos select{
+    font-size: 0.7vw;
+    padding: 0 0 0 5px;
+    width: 30%;
+    height: 2vw;
+    background-color: rgba(238, 238, 238, 0.5);
+    border: none;
+    color: var(--preto);
+}
+
+.imagemGrafico {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* ---------------------- PEDIDOS POR CATEGORIA ----------------------- */
+.pedidosCategoria {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    width: 45.5%;
+}
+
+/* ------------------------ PRECO DOS PEDIDOS ------------------------- */
+.precoPedidos {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    width: 46%;
+}
+
+/* --------------------- ESQUERDA BAIXO -------------------- */
+.esquerdaBaixoAnalises {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    width: 45.5%;
+}
+
+/* ------------------------- VOLUME DOS PEDIDOS ----------------------- */
+.volumePedidos {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    width: 115%;
+    margin-left: -10px;
+    padding: 10px;
+}
+
+/* ---------------------- DESPESA POR CATEGORIA ----------------------- */
+.despesaCategoria {
+    background-color: var(--branco);
+    box-shadow: 1px 1px 4px var(--sombra);
+    border-radius: 20px;
+    width: 115%;
+    margin-left: -10px;
+    padding: 10px;
+}
+
+@media(max-width: 768px){
+    .cimaAnalises {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width: 959px){
+    .cimaAnalises .dropdown {
+        margin-right: 0rem;
+    }
+}
+
+@media(max-width: 991px){
+    .pedidosCategoria {
+        width: 100%;
+    }
+
+    .precoPedidos {
+        width: 100%;
+    }
+
+    .esquerdaBaixoAnalises {
+        width: 100%;
+    }
+
+    .volumePedidos {
+        width: 103%;
+        margin-left: -10px;
+    }
+
+    .despesaCategoria {
+        width: 103%;
+        margin-left: -10px;
+    }
+}
