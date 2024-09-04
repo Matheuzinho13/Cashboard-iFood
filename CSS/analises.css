@@ -61,15 +61,15 @@ body{
 }
 
 .cimaGraficos h1 {
-    font-size: 1.2vw;
+    font-size: 1rem;
     color: var(--vermelho);
 }
 
-.cimaGraficos select{
-    font-size: 0.7vw;
+.cimaGraficos select {
+    font-size: 0.7rem;
     padding: 0 0 0 5px;
     width: 30%;
-    height: 2vw;
+    height: 1.9rem;
     background-color: rgba(238, 238, 238, 0.5);
     border: none;
     color: var(--preto);
