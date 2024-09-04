@@ -249,7 +249,7 @@ body {
 .cimaGraficos select {
     font-size: 0.7rem;
     padding: 0 0 0 5px;
-    width: 30%;
+    width: 40%;
     height: 1.9rem;
     background-color: rgba(238, 238, 238, 0.5);
     border: none;
@@ -370,7 +370,13 @@ body {
 }
 
 /* ---------------------------- RESPONSIVO -----------------------------*/
-@media (max-width: 1200px) and (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1400px) {
+    .receitasDespesas select, .volumePedidos select {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
     .direitaBemvindo img {
         max-width: 110%;
         margin-left: 1rem;
