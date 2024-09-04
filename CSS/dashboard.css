@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --vermelho: #FF001B;
     --branco: #fff;
     --cinza: #EEEEEE;
@@ -13,30 +13,31 @@
     --preto: #000;
 }
 
-body{
+body {
     background-color: var(--cinza);
 }
 
 /* corpo do site flutuando na direita do header horizontal */
-.corpo-site{
-    margin-left: 8.5rem; /* Espaço suficiente para evitar o header */
+.corpo-site {
+    margin-left: 8.5rem;
+    /* Espaço suficiente para evitar o header */
 }
 
-@media(max-width: 845px){
-    .corpo-site{
+@media(max-width: 845px) {
+    .corpo-site {
         margin-left: 0;
     }
 }
 
-@media(min-width: 1700px){
-    .corpo-site{
+@media(min-width: 1700px) {
+    .corpo-site {
         margin-left: 0;
     }
 }
 
 /* conteúdo do corpo do site */
 /* ----------------------------- PERFIL -----------------------------*/
-.bemVindo{
+.bemVindo {
     background-color: var(--vermelho);
     display: flex;
     border-radius: 30px;
@@ -45,35 +46,35 @@ body{
     overflow: visible;
 }
 
-.esquerdaBemvindo{
+.esquerdaBemvindo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.bemVindo h2{
+.bemVindo h2 {
     font-size: 1rem;
     color: var(--branco);
 }
 
-.bvBtn{
+.bvBtn {
     display: flex;
     gap: 2.5rem;
 }
 
-.bvBtn h1{
+.bvBtn h1 {
     font-size: 1.8rem;
     color: var(--branco);
 }
 
-.textosBV h1{
+.textosBV h1 {
     font-size: 1.8rem;
     color: var(--branco);
     font-weight: 600;
     text-align: center;
 }
 
-.bvBtn button{
+.bvBtn button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,16 +82,16 @@ body{
     width: 6rem;
     border: 1px solid var(--branco);
     color: var(--branco);
-    font-size: 1vw;
+    font-size: 1rem;
     padding: 0;
 }
 
-.bvBtn button:hover{
+.bvBtn button:hover {
     background-color: var(--branco);
     color: var(--vermelho);
 }
 
-.direitaBemvindo img{
+.direitaBemvindo img {
     max-width: 100%;
     margin-top: -30px;
 }
@@ -122,7 +123,7 @@ body{
     cursor: pointer;
 }
 
-.baixoPerfil{
+.baixoPerfil {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,17 +138,17 @@ body{
     font-size: 0.8rem;
 }
 
-.esquerdaPerfil{
+.esquerdaPerfil {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.localizacao{
+.localizacao {
     display: flex;
 }
 
-.dadosRestaurante{
+.dadosRestaurante {
     display: flex;
     justify-content: center;
 }
@@ -159,13 +160,19 @@ body{
 }
 
 .linhaPerfil {
-    border-left: 2px solid rgba(255, 0, 0, 0.26); 
+    border-left: 2px solid rgba(255, 0, 0, 0.26);
     height: 3rem;
 }
 
 
 /* ---------------------------- PESQUISA ----------------------------*/
-.pesquisa {
+.pesquisa2,
+.pesquisaMd {
+    display: none;
+}
+
+.pesquisa,
+.pesquisa2 {
     background-color: var(--branco);
     box-shadow: 1px 1px 4px var(--sombra);
     display: flex;
@@ -173,22 +180,26 @@ body{
     border-radius: 20px;
 }
 
-.pesquisa input {
+.pesquisa input,
+.pesquisa2 input {
     border: none;
-    font-size: 1.5vw;
+    font-size: 1.4rem;
 }
 
-.textoPesquisa::placeholder{
+.textoPesquisa::placeholder,
+.textoPesquisa2::placeholder {
     color: rgba(117, 113, 113, 0.7);
 }
 
-.pesquisa button {
+.pesquisa button,
+.pesquisa2 button {
     border: none;
     color: var(--vermelho);
-    font-size: 1.5vw;
+    font-size: 1.4rem;
 }
 
-.pesquisa button:hover {
+.pesquisa button:hover,
+.pesquisa2 button:hover {
     color: var(--branco);
     background-color: var(--vermelho);
 }
@@ -209,7 +220,7 @@ body{
     color: var(--branco);
 }
 
-.mes select{
+.mes select {
     width: 35%;
     height: 3rem;
     background-color: rgba(238, 238, 238, 0.5);
@@ -217,7 +228,7 @@ body{
     color: var(--branco);
 }
 
-.form-select option{
+.form-select option {
     color: var(--preto);
 }
 
@@ -235,11 +246,11 @@ body{
     color: var(--vermelho);
 }
 
-.cimaGraficos select{
+.cimaGraficos select {
     font-size: 0.7rem;
     padding: 0 0 0 5px;
     width: 30%;
-    height: 2vw;
+    height: 1.9rem;
     background-color: rgba(238, 238, 238, 0.5);
     border: none;
     color: var(--preto);
@@ -271,28 +282,33 @@ body{
     border-radius: 20px;
 }
 
-.maisVendido, .menosVendido{
+.maisVendido,
+.menosVendido {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.maisVendido h2, .menosVendido h2{
+.maisVendido h2,
+.menosVendido h2 {
     font-size: 1.3rem;
 }
 
-.maisVendido h3, .menosVendido h3{
+.maisVendido h3,
+.menosVendido h3 {
     font-size: 1rem;
 }
 
-.maisVendido img, .menosVendido img{
+.maisVendido img,
+.menosVendido img {
     width: 4rem;
 }
 
-.esquerdaVendas{
+.esquerdaVendas {
     display: flex;
     flex-direction: column;
 }
+
 /* ---------------------- DESPESAS X CATEGORIA ----------------------*/
 .despesasCategoria {
     background-color: var(--branco);
@@ -308,9 +324,9 @@ body{
 }
 
 /* ---------------------------- EXTRATO -----------------------------*/
-.adicionar a{
+.adicionar a {
     text-decoration: none;
-    color: inherit; /* Herda a cor do elemento pai */
+    color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -334,7 +350,7 @@ body{
     transition: all 0.2s;
 }
 
-.adicionar:hover .seta{
+.adicionar:hover .seta {
     fill: var(--branco);
 }
 
@@ -351,4 +367,67 @@ body{
     background-color: var(--branco);
     border: 1px solid var(--vermelho);
     color: var(--vermelho);
+}
+
+/* ---------------------------- RESPONSIVO -----------------------------*/
+@media (max-width: 1200px) and (min-width: 992px) {
+    .direitaBemvindo img {
+        max-width: 110%;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .perfil img{
+        display: none;
+    }
+
+    .baixoPerfil {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 991px) {
+    .pesquisa,
+    .pesquisaLg {
+        display: none;
+    }
+
+    .pesquisa2,
+    .pesquisaMd {
+        display: flex;
+    }
+
+    .pesquisaMd {
+        padding: 1rem;
+    }
+
+    .pesquisa2 {
+        margin-top: 1.5rem;
+    }
+
+    .adicionar {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .pdf{
+        width: 20%;
+    }
+}
+
+@media(max-width: 545px){
+    .bemVindo {
+        display: flex;    
+        flex-direction: column;
+    }
+    
+    .esquerdaBemvindo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .direitaBemvindo{
+        display: none;
+    }
 }

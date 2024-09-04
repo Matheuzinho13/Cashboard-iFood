@@ -213,8 +213,16 @@
     <main class="corpo-site">
         <div class="container cimaDashboard">
             <div class="row">
+                <div class="col-12 col-md-12 col-lg-7 pesquisa2">
+                    <div class="input-group pesquisaMd">
+                        <input type="text" class="form-control textoPesquisa2" placeholder="Pesquise no nosso Cashboard"
+                            aria-label="Pesquise no nosso Cashboard" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
                 <div class="bemVindo col-12 col-md-12 col-lg-7 mt-5">
-                    <div class="col-6 esquerdaBemvindo">
+                    <div class="col-sm-6 esquerdaBemvindo">
                         <div class="bvBtn">
                             <h1 class="col-8">Seja bem-vindo, <br> Yuri Alberto!</h1>
                             <button type="submit" id="verDados" class="btn verDados col-4">ver dados ></button>
@@ -226,7 +234,7 @@
                             <h2>Gerencie suas finanças, <br> seu bolso também merece uma refeição</h2>
                         </div>
                     </div>
-                    <div class="col-5 offset-1 direitaBemvindo">
+                    <div class="col-sm-5 offset-1 direitaBemvindo">
                         <img src="../Imagens/Dashboard/ilustraçãoBemvindo.svg">
                     </div>
                 </div>
@@ -259,7 +267,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-7 mt-5 pesquisa">
-                    <div class="input-group">
+                    <div class="input-group pesquisaLg">
                         <input type="text" class="form-control textoPesquisa" placeholder="Pesquise no nosso Cashboard"
                             aria-label="Pesquise no nosso Cashboard" aria-describedby="button-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
@@ -288,9 +296,9 @@
         </div>
         </div>
 
-        <div class="container baixoDashboard">
+        <div class="container baixoDashboard mb-3">
             <div class="row">
-                <div class="col-12 col-md-12 col-lg-3 mt-4 receitasDespesas">
+                <div class="col-12 col-md-12 col-lg-3 mt-5 receitasDespesas">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Receitas x Despesas</h1>
                         <select class="form-select" id="tipoSemana1" required>
@@ -301,9 +309,9 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
-                    <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/receitas_despesas.svg">
+                    <img class="img-fluid mb-3 mt-3 imagemGrafico" src="../Imagens/Dashboard/receitas_despesas.svg">
                 </div>
-                <div class="col-12 col-md-12 col-lg-3 offset-lg-1 mt-4 volumePedidos">
+                <div class="col-12 col-md-12 col-lg-3 offset-lg-1 mt-5 volumePedidos">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Volume de Pedidos</h1>
                         <select class="form-select" id="tipoSemana2" required>
@@ -316,7 +324,7 @@
                     </div>
                     <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/volume_pedidos.svg">
                 </div>
-                <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-4 produtoMaisMenos">
+                <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 produtoMaisMenos">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Produto mais vendido</h1>
                         <select class="form-select" id="tipoSemana3" required>
@@ -347,7 +355,7 @@
                         <h2>R$50,00</h2>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-4 mt-4 despesasCategoria">
+                <div class="col-12 col-md-12 col-lg-4 mt-5 despesasCategoria">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Despesas por categoria</h1>
                         <select class="form-select" id="tipoSemana4" required>
@@ -360,7 +368,7 @@
                     </div>
                     <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/despesas_categoria.svg">
                 </div>
-                <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-4 numeroAvaliacoes">
+                <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 numeroAvaliacoes">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Número de avaliações</h1>
                         <select class="form-select" id="tipoSemana5" required>
@@ -373,7 +381,7 @@
                     </div>
                     <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/numero_avaliacoes.svg">
                 </div>
-                <div class="col-12 col-md-12 col-lg-2 offset-lg-1 mt-5 mb-5 extrato">
+                <div class="col-12 col-md-12 col-lg-2 offset-lg-1 my-lg-auto extrato mt-5">
                     <label for="inputExtrato" class="adicionar">
                         <a href="../Pages/transacoes.html">
                             <svg xmlns="http://www.w3.org/2000/svg" class="pdf" shape-rendering="geometricPrecision"
