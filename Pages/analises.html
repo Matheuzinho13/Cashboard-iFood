@@ -16,6 +16,11 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Link Google Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+
     <!-- link css página -->
     <link rel="stylesheet" href="../CSS/analises.css">
 
@@ -212,29 +217,48 @@
     <!-- começo do corpo do site -->
     <main class="corpo-site">
         <!-- topo do site -->
-        <div class="container pt-5 cimaAnalises">
+        <div class="container cimaAnalises mx-auto mx-md-0">
             <div>
                 <h1 class="topo-analise-h1">Análises de dados</h1>
             </div>
-            <div class="dropdown">
-                <button class="btn btn-outline-danger dropdown-toggle botao-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Maio de 2024
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Abril/24</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Maio/24</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Junho/24</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Julho/24</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Agosto/24</a></li>
-                </ul>
+            <div class="botoes-analises">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle botao-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Meses de 2024
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item disabled" href="#">2024</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Janeiro</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Fevereiro</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Março</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Abril</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Maio</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Junho</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Julho</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Agosto</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Setembro</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Outubro</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Novembro</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Dezembro</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button type="button" class="btn botao-ver-transacoes">Ver transações ></button>
+                </div>
             </div>
-            <div>
-                <button type="button" class="btn btn-danger botao-transacoes">Ver transações ></button>
-            </div>
+            
         </div>
 
         <!-- inferior do site -->
@@ -275,19 +299,63 @@
                     <img class="img-fluid mb-2 imagemGrafico" src="../Imagens/Analises/preco_pedidos.svg">
                 </div>
                 <div class="col-12 col-lg-5 mt-4 esquerdaBaixoAnalises">
-                    <div class="receitaDespesaAno">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, nihil! Vitae dolore cupiditate voluptate beatae accusamus, inventore earum assumenda reiciendis alias! Fugit odit est nihil sequi perferendis aspernatur rerum doloremque qui magni itaque voluptates repudiandae reprehenderit distinctio quod similique sit eius vero ab illum minus, esse incidunt, dolorem iusto quis? Ad nulla accusamus, ab pariatur impedit totam doloremque harum facilis fuga nam atque excepturi, eveniet inventore ut neque non. Vitae voluptates consectetur, numquam quia ipsa dolorum dicta blanditiis odit, sint similique, eum sit maxime vel sapiente omnis
+                    <div class="cimaGraficos">
+                        <h1 class="mb-1">Receitas x Despesas registradas por ano</h1>
+                        <select class="form-select" id="tipoSemana1" required>
+                            <option selected disabled>Semanas</option>
+                            <option value="Semana 1">Semana 1</option>
+                            <option value="Semana 2">Semana 2</option>
+                            <option value="Semana 3">Semana 3</option>
+                            <option value="Semana 4">Semana 4</option>
+                        </select>
                     </div>
-                    <div class="receitaDespesaMes">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, nihil! Vitae dolore cupiditate voluptate beatae accusamus, inventore earum assumenda reiciendis alias! Fugit odit est nihil sequi perferendis aspernatur rerum doloremque qui magni itaque voluptates repudiandae reprehenderit distinctio quod similique sit eius vero ab illum minus, esse incidunt, dolorem iusto quis? Ad nulla accusamus, ab pariatur impedit totam doloremque harum facilis fuga nam atque excepturi, eveniet inventore ut neque non. Vitae voluptates consectetur, numquam quia ipsa dolorum dicta blanditiis odit, sint similique, eum sit maxime vel sapiente omnis
+                    <img class="img-fluid mb-2 imagemGrafico" src="..Imagens/Analises/receitas_despesas_ano.svg">
+                    <div class="cimaGraficos">
+                        <h1 class="mb-3 mt-3">Receitas x Despesas registradas por mês</h1>
+                        <select class="form-select mb-3 mt-3" id="tipoSemana1" required>
+                            <option selected disabled>Meses</option>
+                            <option value="Mês 1">Janeiro</option>
+                            <option value="Mês 2">Fevereiro</option>
+                            <option value="Mês 3">Março</option>
+                            <option value="Mês 4">Abril</option>
+                            <option value="Mês 5">Maio</option>
+                            <option value="Mês 6">Junho</option>
+                            <option value="Mês 7">Julho</option>
+                            <option value="Mês 8">Agosto</option>
+                            <option value="Mês 9">Setembro</option>
+                            <option value="Mês 10">Outubro</option>
+                            <option value="Mês 11">Novembro</option>
+                            <option value="Mês 12">Dezembro</option>
+                        </select>
                     </div>
+                    <img class="img-fluid mb-2 imagemGrafico" src="..Imagens/Analises/receitas_despesas_mes.svg">
                 </div>
                 <div class="col-12 col-lg-5 offset-lg-1 mt-4 direitaBaixoAnalises">
                     <div class="volumePedidos">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, nihil! Vitae dolore cupiditate voluptate beatae accusamus, inventore earum assumenda reiciendis alias! Fugit odit est nihil sequi perferendis aspernatur rerum doloremque qui magni itaque voluptates repudiandae reprehenderit distinctio quod similique sit eius vero ab illum minus, esse incidunt, dolorem iusto quis? Ad nulla accusamus, ab pariatur impedit totam doloremque harum facilis fuga nam atque excepturi, eveniet inventore ut neque non. Vitae voluptates consectetur, numquam quia ipsa dolorum dicta blanditiis odit, sint similique, eum sit maxime vel sapiente omnis
+                        <div class="cimaGraficos">
+                            <h1>Volume de pedidos</h1>
+                            <select class="form-select" id="tipoSemana1" required>
+                                <option selected disabled>Semanas</option>
+                                <option value="Semana 1">Semana 1</option>
+                                <option value="Semana 2">Semana 2</option>
+                                <option value="Semana 3">Semana 3</option>
+                                <option value="Semana 4">Semana 4</option>
+                            </select>
+                        </div>
+                        <img class="img-fluid mb-2 imagemGrafico" src="../Imagens/Analises/volume_pedidos.svg">
                     </div>
                     <div class="mt-4 despesaCategoria">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, nihil! Vitae dolore cupiditate voluptate beatae accusamus, inventore earum assumenda reiciendis alias! Fugit odit est nihil sequi perferendis aspernatur rerum doloremque qui magni itaque voluptates repudiandae reprehenderit distinctio quod similique sit eius vero ab illum minus, esse incidunt, dolorem iusto quis? Ad nulla accusamus, ab pariatur impedit totam doloremque harum facilis fuga nam atque excepturi, eveniet inventore ut neque non. Vitae voluptates consectetur, numquam quia ipsa dolorum dicta blanditiis odit, sint similique, eum sit maxime vel sapiente Omnis
+                        <div class="cimaGraficos">
+                            <h1>Despesas por categoria</h1>
+                            <select class="form-select" id="tipoSemana1" required>
+                                <option selected disabled>Semanas</option>
+                                <option value="Semana 1">Semana 1</option>
+                                <option value="Semana 2">Semana 2</option>
+                                <option value="Semana 3">Semana 3</option>
+                                <option value="Semana 4">Semana 4</option>
+                            </select>
+                        </div>
+                        <img class="img-fluid mb-2 imagemGrafico" src="../Imagens/Analises/despesas_categoria.svg">
                     </div>
                 </div>
             </div>

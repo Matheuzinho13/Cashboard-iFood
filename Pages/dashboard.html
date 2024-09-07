@@ -309,7 +309,15 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
-                    <img class="img-fluid mb-3 mt-lg-4 mt-xl-3 imagemGrafico" src="../Imagens/Dashboard/receitas_despesas.svg">
+                    <div class="colunaGraficoContainer">
+                        <div class="colunaGrafico">
+                            <canvas id="colunaGrafico"></canvas>
+                        </div>
+                        <div class="legendaColunaGrafico">
+                            <div><span class="legendaColunaCor" style="background-color: #51C13F;"></span> Número de receitas</div>
+                            <div><span class="legendaColunaCor" style="background-color: #FF001B;"></span> Número de despesas</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-3 offset-lg-1 mt-5 volumePedidos">
                     <div class="cimaGraficos">
@@ -322,7 +330,11 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
-                    <img class="img-fluid mb-3 mt-lg-4 mt-xl-3 mt- imagemGrafico" src="../Imagens/Dashboard/volume_pedidos.svg">
+                    <div class="linhaGraficoContainer">
+                        <div class="linhaGrafico mt-3">
+                            <canvas id="linhaGrafico"></canvas>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 produtoMaisMenos">
                     <div class="cimaGraficos">
@@ -366,7 +378,16 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
-                    <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/despesas_categoria.svg">
+                    <div class="pizzaGraficoContainer">
+                        <canvas class="pizzaGrafico" id="pizzaGrafico"></canvas>
+                        <div class="legendaPizzaGrafico">
+                            <div><span class="legendaPizzaCor" style="background-color: #FF001B;"></span> Estoque</div>
+                            <div><span class="legendaPizzaCor" style="background-color: #B2323F;"></span> Aluguel</div>
+                            <div><span class="legendaPizzaCor" style="background-color: #E73B3B;"></span> Contas</div>
+                            <div><span class="legendaPizzaCor" style="background-color: #E27F7F;"></span> Transporte</div>
+                            <div><span class="legendaPizzaCor" style="background-color: #84111E;"></span> Salários</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 numeroAvaliacoes">
                     <div class="cimaGraficos">
@@ -379,7 +400,11 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
-                    <img class="img-fluid mb-3 imagemGrafico" src="../Imagens/Dashboard/numero_avaliacoes.svg">
+                    <div class="barraGraficoContainer">
+                        <div class="barraGrafico">
+                            <canvas id="barraGrafico"></canvas>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-2 offset-lg-1 my-lg-auto extrato mt-5">
                     <label for="inputExtrato" class="adicionar">

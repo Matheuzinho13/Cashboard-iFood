@@ -256,11 +256,6 @@ body {
     color: var(--preto);
 }
 
-.imagemGrafico {
-    display: flex;
-    margin: 0 auto;
-}
-
 /* ----------------------- RECEITAS X DESPESAS ----------------------*/
 .receitasDespesas {
     background-color: var(--branco);
@@ -268,11 +263,35 @@ body {
     border-radius: 20px;
 }
 
+.colunaGrafico canvas {
+    max-width: 100%;
+}
+
+.legendaColunaGrafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6rem;
+    font-family: 'Poppins';
+}
+
+.legendaColunaCor {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 /* ------------------------ VOLUME X PEDIDOS  -----------------------*/
 .volumePedidos {
     background-color: var(--branco);
     box-shadow: 1px 1px 4px var(--sombra);
     border-radius: 20px;
+}
+
+.linhaGrafico canvas {
+    max-width: 100%;
 }
 
 /* ------------------ PRODUTO MAIS E MENOS VENDIDO ------------------*/
@@ -316,11 +335,41 @@ body {
     border-radius: 20px;
 }
 
+.pizzaGraficoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.pizzaGrafico {
+    margin-left: -50px;
+    width: 100%;
+}
+
+.legendaPizzaGrafico div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    margin-left: -50px;
+}
+
+.legendaPizzaCor {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 /* ---------------------- NUMERO DE AVALIACOES ----------------------*/
 .numeroAvaliacoes {
     background-color: var(--branco);
     box-shadow: 1px 1px 4px var(--sombra);
     border-radius: 20px;
+}
+
+.barraGrafico canvas {
+    width: 100%;
 }
 
 /* ---------------------------- EXTRATO -----------------------------*/
@@ -390,6 +439,10 @@ body {
     .baixoPerfil {
         justify-content: center;
     }
+
+    .colunaGraficoContainer, .linhaGraficoContainer {
+        margin-top: 1rem;
+    }
 }
 
 @media(max-width: 991px) {
@@ -409,6 +462,32 @@ body {
 
     .pesquisa2 {
         margin-top: 1.5rem;
+    }
+
+    .colunaGrafico, .linhaGrafico, .pizzaGrafico, .barraGrafico {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pizzaGrafico, .barraGrafico canvas {
+        width: 70%;
+    }
+    
+    .pizzaGraficoContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pizzaGrafico {
+        margin-bottom: 1rem;
+    }
+
+    .legendaPizzaGrafico div {
+        margin-left: -50px;
+    }
+
+    .legendaPizzaCor {
+        margin-left: 10px;
     }
 
     .adicionar {
@@ -435,5 +514,11 @@ body {
     
     .direitaBemvindo{
         display: none;
+    }
+
+    .legendaPizzaCor {
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
     }
 }

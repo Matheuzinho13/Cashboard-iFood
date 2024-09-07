@@ -40,7 +40,7 @@ header.container-fluid{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.73rem;
 }
 
 .nav-link:hover{
