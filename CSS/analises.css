@@ -1,5 +1,5 @@
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -14,6 +14,7 @@
 
 body{
     background-color: var(--cinza);
+    min-height: 277vh;
 }
 
 /* corpo do site flutuando na direita do header horizontal */
@@ -38,13 +39,74 @@ body{
 .cimaAnalises {
     display: flex;
     justify-content: space-between;
+    padding-top: 4.2rem;
+}
+
+.cimaAnalises h1 {
+    background: linear-gradient(45deg, #d11124, var(--vermelho));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fill 2s ease-in-out infinite;
+    margin-left: 4rem;
+}
+
+@keyframes fill {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .cimaAnalises .dropdown {
     margin-right: 7rem;
 }
 
+.botoes-analises {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-dropdown {
+    border: 1px solid var(--vermelho);
+    color: transparent;
+    color: var(--vermelho);
+    border-radius: 20px;
+}
+
+.botao-dropdown:hover {
+    background-color: #ececec;
+    border: 1px solid #ae1121;
+    color: #ae1121;
+}
+
+.botao-ver-transacoes {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.botao-ver-transacoes:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    transform: scale(1.03);
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
 /* --------------------------- BAIXO DO SITE --------------------------- */
+.baixoAnalises {
+    margin-top: 4rem;
+}
 /* ------------------ PRODUTO MAIS E MENOS VENDIDOS ------------------- */
 .produtoMaisMenos {
     background-color: var(--branco);
@@ -65,7 +127,7 @@ body{
     color: var(--vermelho);
 }
 
-.cimaGraficos select {
+.cimaGraficos select{
     font-size: 0.7rem;
     padding: 0 0 0 5px;
     width: 30%;
@@ -133,12 +195,43 @@ body{
 }
 
 @media(max-width: 959px){
+
     .cimaAnalises .dropdown {
         margin-right: 0rem;
+    }
+
+    .botao-ver-transacoes {
+        width: 170px;
+        padding: 8px 0;
+    }
+}
+
+@media(max-width: 970px) {
+
+    .botao-dropdown {
+        margin-left: 50px;
     }
 }
 
 @media(max-width: 991px){
+
+    body {
+        min-height: 575vh;
+    }
+
+    .botoes-analises {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .cimaAnalises h1 {
+        color: var(--vermelho);
+        font-size: 2.6rem;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
     .pedidosCategoria {
         width: 100%;
     }
@@ -159,5 +252,13 @@ body{
     .despesaCategoria {
         width: 103%;
         margin-left: -10px;
+    }
+}
+
+@media(max-width: 996px) {
+    .botao-ver-transacoes {
+        width: 170px;
+        padding: 7px 0;
+        margin-right: 40px;
     }
 }
