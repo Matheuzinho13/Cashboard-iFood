@@ -150,6 +150,32 @@ body{
     width: 45.5%;
 }
 
+.pizzaGraficoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.pizzaGrafico {
+    margin-left: -50px;
+    width: 80%;
+}
+
+.legendaPizzaGrafico div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins';
+    margin-left: -50px;
+}
+
+.legendaPizzaCor {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 /* ------------------------ PRECO DOS PEDIDOS ------------------------- */
 .precoPedidos {
     background-color: var(--branco);
@@ -158,12 +184,55 @@ body{
     width: 46%;
 }
 
+.linhaGrafico {
+    display: flex;
+    justify-content: center;
+}
+
+.linhaGrafico canvas {
+    width: 70%;
+}
+
 /* --------------------- ESQUERDA BAIXO -------------------- */
 .esquerdaBaixoAnalises {
     background-color: var(--branco);
     box-shadow: 1px 1px 4px var(--sombra);
     border-radius: 20px;
     width: 45.5%;
+}
+
+.colunaGrafico {
+    display: flex;
+    justify-content: center;
+}
+
+.colunaGrafico canvas {
+    width: 70%;
+}
+
+.legendaColunaGrafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6rem;
+    font-family: 'Poppins';
+}
+
+.legendaColunaCor {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.barraGrafico { 
+    display: flex;
+    justify-content: center;
+}
+
+.barraGrafico canvas {
+    width: 70%;
 }
 
 /* ------------------------- VOLUME DOS PEDIDOS ----------------------- */
