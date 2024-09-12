@@ -57,7 +57,7 @@ body{
     100% { background-position: 0% 0%; }
 }
 
-.cimaAnalises .dropdown {
+.dropdown {
     margin-right: 7rem;
 }
 
@@ -105,13 +105,79 @@ body{
 
 /* --------------------------- BAIXO DO SITE --------------------------- */
 .baixoAnalises {
-    margin-top: 4rem;
+    margin-top: 2.4rem;
 }
 /* ------------------ PRODUTO MAIS E MENOS VENDIDOS ------------------- */
 .produtoMaisMenos {
     background-color: var(--branco);
     box-shadow: 1px 1px 4px var(--sombra);
     border-radius: 20px;
+}
+
+.esquerda-tabela-produtoMaisMenos, .direita-tabela-produtoMaisMenos {
+    margin-top: 30px;
+}
+
+.tabela-titulo h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--vermelho);
+    width: 100%;
+}
+
+.tabela-titulo h3 {
+    font-weight: 500;
+    text-align: center;
+    color: #303030;
+}
+
+.tabela-td-ranking-produtoMaisMenos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabela-td-ranking-produtoMaisMenos h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--vermelho);
+}
+
+.esquerda-tabela-produtoMaisMenos h2, .direita-tabela-produtoMaisMenos h2 {
+    font-size: 1.2rem;
+}
+
+.esquerda-tabela-produtoMaisMenos h3, .direita-tabela-produtoMaisMenos h3 {
+    font-size: 1rem;
+}
+
+.tabela-td-numeros-produtoMaisMenos {
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.esquerda-botoes-produtoMaisMenos, .direita-botoes-produtoMaisMenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.botoes-produtoMaisMenos {
+    background-color: transparent;
+    color: var(--preto);
+    border: 1px solid var(--vermelho);
+    padding: 3px 14px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.7rem;
+    transition: 0.2s;
+}
+
+.botoes-produtoMaisMenos:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
 }
 
 /* ---------------------------- GRÁFICOS ----------------------------*/
@@ -255,50 +321,21 @@ body{
     padding: 10px;
 }
 
-@media(max-width: 768px){
+/* ---------------------- RESPONSIVIDADE ----------------------- */
+@media(max-width: 991.5px){
+    body {
+        min-height: 575vh;
+    }
+
     .cimaAnalises {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-}
-
-@media(max-width: 959px){
-
-    .cimaAnalises .dropdown {
-        margin-right: 0rem;
-    }
-
-    .botao-ver-transacoes {
-        width: 170px;
-        padding: 8px 0;
-    }
-}
-
-@media(max-width: 970px) {
-
-    .botao-dropdown {
-        margin-left: 50px;
-    }
-}
-
-@media(max-width: 991px){
-
-    body {
-        min-height: 575vh;
-    }
-
-    .botoes-analises {
-        display: flex;
-        justify-content: center;
-        gap: 70px;
-    }
 
     .cimaAnalises h1 {
-        color: var(--vermelho);
-        font-size: 2.6rem;
-        margin-bottom: 30px;
-        font-size: 2rem;
+        margin-left: 0;
+        text-align: center;
     }
 
     .pedidosCategoria {
@@ -324,10 +361,47 @@ body{
     }
 }
 
-@media(max-width: 996px) {
-    .botao-ver-transacoes {
-        width: 170px;
-        padding: 7px 0;
-        margin-right: 40px;
+@media (max-width: 455px) {
+    .dropdown {
+        margin-right: 0rem;
+    }
+    
+    .botoes-analises button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 485px) {
+    .table td:nth-child(3) {
+        display: none;
+    }
+    
+    .table th:nth-child(3) {
+        display: none;
+    }
+
+    .botoes-produtoMaisMenos {
+        font-size: 10px;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .esquerda-botoes-produtoMaisMenos, .direita-botoes-produtoMaisMenos {
+        align-items: none;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .botoes-produtoMaisMenos {
+        font-size: 9px;
+
+    }
+    
+    .tabela-titulo h1, .tabela-titulo h3 {
+        font-size: 0.8rem;
+    }
+
+    .nome-unidade-produtoMaisMenos h2, .nome-unidade-produtoMaisMenos h3, .tabela-td-numeros-produtoMaisMenos {
+        font-size: 0.7rem;
     }
 }
