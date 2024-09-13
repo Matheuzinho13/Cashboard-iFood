@@ -215,41 +215,41 @@
         <div class="colab-container">
 
             <h1>Cadastro de Colaboradores</h1>
-            <div class="form-container">
+            <form class="form-container"  id="formColaboradores">
                 
                 <label>
                     Nome
-                    <input type="text">
+                    <input type="text" id="nomeColaborador">
                 </label>
                 
                 <label>
                     Sobrenome
-                    <input type="text">
+                    <input type="text" id="sobrenomeColaborador">
                 </label>
                 
                 <label>
                     Data de Admissão
-                    <input type="date">
+                    <input type="date" id="dataAsmissão">
                 </label>
 
                 <label>
                     Email
-                    <input type="email">
+                    <input type="email" id="emailColaborador">
                 </label>
                 
                 <label>
                     Nível de Acesso
-                    <select>
+                    <select id="nivelColaborador">
                         <option value="Selecionar" selected >Selecionar</option>
                         <option value="Administrador">Administrador</option>
                         <option value="Colaborador">Colaborador</option>
                     </select>
                 </label>
                 
-                <button>Cadastrar</button>
-            </div>
+                <button type="submit">Cadastrar</button>
+            </form>
 
-            <h2>5 colaboradores cadastrados</h2>
+            <h2  id="numeroColaboradores">5 colaboradores cadastrados</h2>
     
             <table class="colaboradores-tabela">
                 <thead>
@@ -261,39 +261,32 @@
                         <th>Nível de Acesso</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     <tr>
-                        <td>3104</td>
+                        <th scope="row">1</th>
                         <td>Fernanda Lima</td>
                         <td>Fernanda@-ifood.com</td>
                         <td>31/05/2024</td>
                         <td>Administrador</td>
                     </tr>
                     <tr>
-                        <td>3105</td>
+                        <th scope="row">2</th>
                         <td>Maria Silva</td>
                         <td>Maria@-ifood.com</td>
                         <td>31/05/2024</td>
                         <td>Colaborador</td>
                     </tr>
                     <tr>
-                        <td>3106</td>
+                        <th scope="row">3</th>
                         <td>João Oliveira</td>
                         <td>João@-ifood.com</td>
                         <td>31/05/2024</td>
                         <td>Colaborador</td>
                     </tr>
                     <tr>
-                        <td>3107</td>
+                        <th scope="row">4</th>
                         <td>Ana Souza</td>
                         <td>Ana.souza@-ifood.com</td>
-                        <td>31/05/2024</td>
-                        <td>Colaborador</td>
-                    </tr>
-                    <tr>
-                        <td>3108</td>
-                        <td>Carlos Pereira</td>
-                        <td>Carlos.Pereira@-ifood.com</td>
                         <td>31/05/2024</td>
                         <td>Colaborador</td>
                     </tr>
