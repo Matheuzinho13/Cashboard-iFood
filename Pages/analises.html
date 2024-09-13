@@ -217,11 +217,12 @@
     <!-- começo do corpo do site -->
     <main class="corpo-site">
         <!-- topo do site -->
-        <div class="container cimaAnalises mx-auto mx-md-0">
+        <div class="container cimaAnalises">
             <div>
                 <h1 class="topo-analise-h1">Análises de dados</h1>
             </div>
             <div class="botoes-analises">
+                <!-- Botão de Dropdown para selecionar o mês -->
                 <div class="dropdown">
                     <button class="btn dropdown-toggle botao-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Meses de 2024
@@ -254,6 +255,7 @@
                         <li><a class="dropdown-item" href="#">Dezembro</a></li>
                     </ul>
                 </div>
+                <!-- Botão para visualizar as transações -->
                 <div>
                     <button type="button" class="btn botao-ver-transacoes">Ver transações ></button>
                 </div>
@@ -264,17 +266,136 @@
         <!-- inferior do site -->
         <div class="container baixoAnalises">
             <div class="row">
-                <div class="col-12 produtoMaisMenos">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem incidunt, sunt dolorum aliquid ullam omnis magni harum sint inventore facilis iusto hic. Exercitationem, consequuntur molestiae quaerat commodi expedita, nihil laboriosam maxime quidem id amet aliquid accusamus reiciendis tenetur, asperiores corporis doloribus minima animi explicabo fuga quam in. Quaerat voluptas perspiciatis maiores eius eligendi exercitationem, cumque expedita? Necessitatibus quod vel porro, ea fuga praesentium illum natus enim quo iusto, omnis, quibusdam deleniti voluptatibus eos laboriosam possimus distinctio repellat rem sunt impedit fugiat harum velit repudiandae. In sed eius doloremque accusamus. Aut porro quae tempore minima eveniet sequi? Iusto odio rerum ipsam tempore soluta enim velit, quasi, cupiditate veniam earum quibusdam aut obcaecati vitae sequi adipisci doloremque laudantium eum doloribus ea inventore, repellat incidunt tempora? Iure voluptas, debitis aut cupiditate officiis blanditiis! Saepe iusto accusamus delectus sequi. Minima doloremque cumque, aspernatur laudantium aliquid nisi consectetur cum voluptate dignissimos quod! Illum magnam debitis sit reprehenderit esse architecto culpa in blanditiis, earum, magni vel hic maiores, facilis voluptatibus odio velit dolorem! Itaque, similique. Velit maiores eaque pariatur cumque quasi dolor iure cupiditate! Officiis numquam saepe tempora nesciunt laboriosam quaerat id aliquid sit perspiciatis facere, ipsa cum inventore sunt obcaecati fugiat assumenda facilis commodi similique? Deserunt suscipit amet ut, sapiente accusamus magni vel dignissimos rerum qui ab ipsam doloribus non adipisci quod dolor numquam iusto impedit accusantium quasi pariatur nam soluta assumenda? Illo culpa voluptatibus corrupti asperiores ducimus labore consequatur? Adipisci et cum, ea quia nihil est? Omnis aut at voluptatem corrupti vero, nihil debitis neque cupiditate molestias? At voluptates nobis cupiditate velit quisquam ducimus aperiam explicabo amet ipsam optio suscipit dignissimos eligendi id necessitatibus, nemo vitae repellendus a quos. Veniam unde ut voluptatibus hic tenetur sed dolore, soluta necessitatibus eum! Doloremque consectetur, quo dolor sed eligendi neque laborum nostrum. Corporis magnam perspiciatis dolor corrupti? voluptas, debitis aut cupiditate officiis blanditiis blanditiis
+                <!-- Seção de produtos mais e menos vendidos -->
+                <div class="col-12 produtoMaisMenos px-4 pb-1">
+                    <div class="row">
+                        <!-- Coluna da esquerda com os produtos mais vendidos -->
+                        <div class="col-lg-6 esquerda-produtoMaisMenos">
+                            <!-- Botões para selecionar a semana -->
+                            <div class="esquerda-botoes-produtoMaisMenos">
+                                <button class="botoes-produtoMaisMenos">Semana 1</button>
+                                <button class="botoes-produtoMaisMenos">Semana 2</button>
+                                <button class="botoes-produtoMaisMenos">Semana 3</button>
+                                <button class="botoes-produtoMaisMenos">Semana 4</button>
+                            </div>
+                            <!-- Tabela com os produtos mais vendidos -->
+                            <div class="esquerda-tabela-produtoMaisMenos">
+                                <table class="table table-borderless">
+                                    <thead>
+                                      <tr>
+                                        <!-- Cabeçalho da tabela -->
+                                        <th class="tabela-titulo"><h1>Mais vendidos</h1></th>
+                                        <th class="tabela-titulo"><h3>Valor unitário</h3></th>
+                                        <th class="tabela-titulo"><h3>Número de visitas</h3></th>
+                                        <th class="tabela-titulo"><h3>Receita total</h3></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <!-- Linhas da tabela com os produtos mais vendidos -->
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos ms-1"><h1>1°</h1><img src="../Imagens/Analises/costela.svg" alt="Produto 1" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Costela</h2><h3>500 unidades</h3></div></td>
+                                            <td class="tabela-td-numeros-produtoMaisMenos">R$ 49,99</td>
+                                            <td class="tabela-td-numeros-produtoMaisMenos">835</td>
+                                            <td class="tabela-td-numeros-produtoMaisMenos">R$ 24.995</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>2°</h1><img src="../Imagens/Analises/burger.svg" alt="Produto 2" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Burger</h2><h3>375 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 37,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">764</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 14.246</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>3°</h1><img src="../Imagens/Analises/bloomin-onion.svg" alt="Produto 3" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Bloomion Onion</h2><h3>289 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 39,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">436</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 11.557</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>4°</h1><img src="../Imagens/Analises/chopp-colorado.svg" alt="Produto 4" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Chopp Colorado</h2><h3>256 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 39,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">436</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 11.557</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>5°</h1><img src="../Imagens/Analises/super-milkshake.svg" alt="Produto 5" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Super Milkshake</h2><h3>215 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 39,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">436</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 11.557</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>    
+                        <!-- Coluna da direita com os produtos menos vendidos -->
+                        <div class="col-lg-6 direita-produtoMaisMenos">
+                            <!-- Botões para selecionar a semana -->
+                            <div class="direita-botoes-produtoMaisMenos">
+                                <button class="botoes-produtoMaisMenos">Semana 1</button>
+                                <button class="botoes-produtoMaisMenos">Semana 2</button>
+                                <button class="botoes-produtoMaisMenos">Semana 3</button>
+                                <button class="botoes-produtoMaisMenos">Semana 4</button>
+                            </div>
+                            <!-- Tabela com os produtos menos vendidos -->
+                            <div class="direita-tabela-produtoMaisMenos">
+                                <table class="table table-borderless">
+                                    <thead>
+                                      <tr>
+                                        <!-- Cabeçalho da tabela -->
+                                        <th class="tabela-titulo"><h1>Menos vendidos</h1></th>
+                                        <th class="tabela-titulo"><h3>Valor unitário</h3></th>
+                                        <th class="tabela-titulo"><h3>Número de visitas</h3></th>
+                                        <th class="tabela-titulo"><h3>Receita total</h3></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <!-- Linhas da tabela com os produtos menos vendidos -->
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos ms-1"><h1>1°</h1><img src="../Imagens/Analises/limonada-rosa.svg" alt="Produto 1" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Lemonade</h2><h3>73 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 19,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">345</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 1.459</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>2°</h1><img src="../Imagens/Analises/fritas.svg" alt="Produto 2" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Fritas</h2><h3>84 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 21,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">125</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 1.847</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>3°</h1><img src="../Imagens/Analises/legumes.svg" alt="Produto 3" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Legumes a vapor</h2><h3>98 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 24,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">478</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 2.449</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>4°</h1><img src="../Imagens/Analises/super-wings.svg" alt="Produto 4" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Super<br>Wings</h2><h3>110 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 31,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">245</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 3.518</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tabela-td-ranking-produtoMaisMenos"><h1>5°</h1><img src="../Imagens/Analises/havana-thunder.svg" alt="Produto 5" class="img-fluid" style="max-width: 50px;"><div class="nome-unidade-produtoMaisMenos"><h2>Havanna Thunder</h2><h3>145 unidades</h3></div></td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 26,99</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">394</td>
+                                        <td class="tabela-td-numeros-produtoMaisMenos">R$ 3.913</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>        
+                    </div>
                 </div>
+                <!-- Seção de pedidos por categoria -->
                 <div class="col-12 col-lg-5 mt-4 pedidosCategoria">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Pedidos por categoria</h1>
+                        <!-- Dropdown para selecionar "Mais vendidos" ou "Menos vendidos" -->
                         <select class="form-select" id="tipoSemana1" required>
                             <option selected disabled>Mais vendidos</option>
                             <option value="Semana 1">Mais vendidos</option>
                             <option value="Semana 2">Menos vendidos</option>
                         </select>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana1" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -283,8 +404,10 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Gráfico de pizza -->
                     <div class="mb-2 pizzaGraficoContainer">
                         <canvas class="pizzaGrafico" id="pizzaGrafico"></canvas>
+                        <!-- Legenda do gráfico de pizza -->
                         <div class="legendaPizzaGrafico">
                             <div><span class="legendaPizzaCor" style="background-color: #FF001B;"></span> Billabong Hour</div>
                             <div><span class="legendaPizzaCor" style="background-color: #B2323F;"></span> Sobremesas</div>
@@ -294,9 +417,11 @@
                         </div>
                     </div>                
                 </div>
+                <!-- Seção de preço dos pedidos -->
                 <div class="col-12 col-lg-5 offset-lg-1 mt-4 precoPedidos">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Preço dos pedidos</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana1" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -305,15 +430,18 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Gráfico de linhas -->
                     <div class="mb-3 linhaGraficoContainer">
                         <div class="linhaGrafico mt-3">
                             <canvas id="linhaGrafico"></canvas>
                         </div>
                     </div>
                 </div>
+                <!-- Seção de receitas e despesas -->
                 <div class="col-12 col-lg-5 mt-4 esquerdaBaixoAnalises">
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Receitas x Despesas registradas por ano</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana1" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -322,17 +450,21 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Gráfico de colunas -->
                     <div class="colunaGraficoContainer">
                         <div class="colunaGrafico">
                             <canvas id="colunaGrafico"></canvas>
                         </div>
+                        <!-- Legenda do gráfico de colunas -->
                         <div class="legendaColunaGrafico mt-2">
                             <div><span class="legendaColunaCor" style="background-color: #51C13F;"></span> Número de receitas</div>
                             <div><span class="legendaColunaCor" style="background-color: #FF001B;"></span> Número de despesas</div>
                         </div>
                     </div>
+                    <!-- Seção de receitas e despesas por mês -->
                     <div class="cimaGraficos">
                         <h1 class="mb-3 mt-3">Receitas x Despesas registradas por mês</h1>
+                        <!-- Dropdown para selecionar o mês -->
                         <select class="form-select mb-3 mt-3" id="tipoSemana1" required>
                             <option selected disabled>Meses</option>
                             <option value="Mês 1">Janeiro</option>
@@ -349,20 +481,25 @@
                             <option value="Mês 12">Dezembro</option>
                         </select>
                     </div>
+                    <!-- Gráfico de barras horizontais -->
                     <div class="mb-2 barraGraficoContainer">
                         <div class="barraGrafico">
                             <canvas id="barraGrafico"></canvas>
                         </div>
+                        <!-- Legenda do gráfico de barras horizontais -->
                         <div class="legendaColunaGrafico">
                             <div><span class="legendaColunaCor" style="background-color: #51C13F;"></span> Receitas registradas</div>
                             <div><span class="legendaColunaCor" style="background-color: #FF001B;"></span> Despesas registradas</div>
                         </div>
                     </div>
                 </div>
+                <!-- Seção de volume de pedidos e despesas por categoria -->
                 <div class="col-12 col-lg-5 offset-lg-1 mt-4 direitaBaixoAnalises">
+                    <!-- Seção de volume de pedidos -->
                     <div class="volumePedidos">
                         <div class="cimaGraficos">
                             <h1>Volume de pedidos</h1>
+                            <!-- Dropdown para selecionar a semana -->
                             <select class="form-select" id="tipoSemana1" required>
                                 <option selected disabled>Semanas</option>
                                 <option value="Semana 1">Semana 1</option>
@@ -371,15 +508,18 @@
                                 <option value="Semana 4">Semana 4</option>
                             </select>
                         </div>
+                        <!-- Gráfico de colunas -->
                         <div class="colunaGraficoContainer">
                             <div class="colunaGrafico">
                                 <canvas id="novoColunaGrafico"></canvas>
                             </div>
                         </div>
                     </div>
+                    <!-- Seção de despesas por categoria -->
                     <div class="mt-4 despesaCategoria">
                         <div class="cimaGraficos">
                             <h1>Despesas por categoria</h1>
+                            <!-- Dropdown para selecionar a semana -->
                             <select class="form-select" id="tipoSemana1" required>
                                 <option selected disabled>Semanas</option>
                                 <option value="Semana 1">Semana 1</option>
@@ -388,8 +528,10 @@
                                 <option value="Semana 4">Semana 4</option>
                             </select>
                         </div>
+                        <!-- Gráfico de pizza -->
                         <div class="pizzaGraficoContainer">
                             <canvas class="pizzaGrafico" id="novoPizzaGrafico"></canvas>
+                            <!-- Legenda do gráfico de pizza -->
                             <div class="legendaPizzaGrafico">
                                 <div><span class="legendaPizzaCor" style="background-color: #FF001B;"></span> Contas</div>
                                 <div><span class="legendaPizzaCor" style="background-color: #B2323F;"></span> Transporte</div>

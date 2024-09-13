@@ -33,4 +33,69 @@ body{
     }
 }
 
-/* conteúdo do corpo do site */
+/* --------------------------- CONTEUDO DO CORPO DO SITE --------------------------- */
+/* Estilos para o container principal da tela de perfil */
+#pagina-perfil {
+    margin: 5px;
+    padding: 5px;
+    min-height: 100vh;
+}
+
+/* Estilos para a linha principal da tela */
+#linha {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+/* Estilos para o container do avatar */
+#avatar {
+    background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+    margin: 2rem;
+}
+
+/* Estilos para a seção de descrição */
+#descricao {
+      textarea{
+        padding: 10px;
+        max-width: 100%;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #dfdfdf;
+        justify-content: left;
+      }
+     
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+}
+
+/* Estilos para a modal de edição de cadastro */
+.modal-dialog {
+    max-width: 53%;
+}
+
+/* Estilos para o texto de campos obrigatórios */
+.obrigatorio {
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+/* Estilos para os campos de entrada da modal de edição */
+#formEditarCadastro .form-control {
+    border: 1px solid #ccc;
+}
+
+/* Estilos responsivos para a modal de edição */
+@media (max-width: 991px) {
+    .modal-dialog {
+        max-width: 600px;
+    }
+}

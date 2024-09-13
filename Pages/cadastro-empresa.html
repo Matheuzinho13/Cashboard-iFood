@@ -23,41 +23,56 @@
 </head>
 
 <body>
+    <!-- Define o container principal da página com flexbox para centralizar o conteúdo -->
     <div class="vh-100 d-flex justify-content-center align-items-center flex-column" id="basebox">
+        <!-- Define a linha principal com flexbox para centralizar o conteúdo -->
         <div class="d-flex justify-content-center align-items-center row">
+            <!-- Define o container do formulário de cadastro -->
             <div class="col-sm-8 col-md-6 col-lg-4 p-4 mt-auto shadow rounded" id="cadastrobox">
+                <!-- Formulário de cadastro de empresa -->
                 <form id="formempresa">
+                    <!-- Título do formulário -->
                     <h1 id="infoempresa">Insira as informações da sua empresa</h1>
+                    <!-- Campo de entrada para o CNPJ -->
                     <div class="mb-4">
                         <label class="form-label">CNPJ*</label>
                         <input type="text" class="form-control" id="cnpj" placeholder="">
                     </div>
+                    <!-- Campo de entrada para o Nome Fantasia -->
                     <div class="mb-4">
                         <label class="form-label">Nome Fantasia*</label>
                         <input type="text" class="form-control" id="nomefantasia" placeholder="">
                     </div>
+                    <!-- Campo de entrada para o Email -->
                     <div class="mb-4">
                         <label class="form-label">E-mail*</label>
                         <input type="email" class="form-control" id="email" placeholder="nome@email.com">
                     </div>
+                    <!-- Campo de entrada para a Senha -->
                     <div class="mb-4">
                         <label class="form-label">Senha (+ de 6 caracteres)*</label>
                         <input type="password" class="form-control" id="senha" placeholder="********">
                     </div>
+                    <!-- Campo de entrada para repetir a Senha -->
                     <div class="mb-4">
                         <label class="form-label">Repita a senha*</label>
                         <input type="password" class="form-control" id="senha" placeholder="********">
                     </div>
+                    <!-- Botão para continuar o cadastro -->
                     <div class="form-floating d-flex justify-content-center align-items-center flex-column">
                         <a class="btn btn-secondary btn-lg w-50 btn-danger mt-4 mb-4" href="#" role="link" id="linkcontinuar">Continuar</a>
                     </div>
                 </form>
             </div>
+            <!-- Define o container para as logos -->
             <div class="col-sm-8 col-md-6 col-lg-3 p-4 mt-auto" id="logobox">
+                <!-- Define a linha das logos -->
                 <div class="row d-flex align-items-bottom" id="linhalogos">
+                    <!-- Logo iFood -->
                     <div class="col form-floating d-flex justify-content-center align-items-center flex-column">
                         <img src="../Imagens/Cadastro Empresa/logo_ifood.png" class="rounded float-start" id="logoifood" alt="Logo iFood"> 
                     </div>
+                    <!-- Logo Cashboard -->
                     <div class="col form-floating d-flex justify-content-center align-items-center flex-column">
                         <img src="../Imagens/Cadastro Empresa/logo_cashboard.png" class="rounded float-end" id="logocashboard"alt="Logo Cashboard">
                     </div>

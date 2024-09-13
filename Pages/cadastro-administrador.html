@@ -211,6 +211,134 @@
 
     <!-- começo do corpo do site -->
     <main class="corpo-site">
+
+        <div class="colab-container">
+
+            <h1>Cadastro de Colaboradores</h1>
+            <!-- Formulário de cadastro de colaboradores -->
+            <form class="form-container" id="formColaboradores">
+                <!-- Campo de entrada para o nome -->
+                <label>
+                    Nome
+                    <input type="text" id="nomeColaborador">
+                </label>
+
+                <!-- Campo de entrada para o sobrenome -->
+                <label>
+                    Sobrenome
+                    <input type="text" id="sobrenomeColaborador">
+                </label>
+
+                <!-- Campo de entrada para a data de admissão -->
+                <label>
+                    Data de Admissão
+                    <input type="date" id="dataAsmissão">
+                </label>
+
+                <!-- Campo de entrada para o email -->
+                <label>
+                    Email
+                    <input type="email" id="emailColaborador">
+                </label>
+
+                <!-- Campo de seleção para o nível de acesso -->
+                <label>
+                    Nível de Acesso
+                    <select id="nivelColaborador">
+                        <option value="Selecionar" selected>Selecionar</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Colaborador">Colaborador</option>
+                    </select>
+                </label>
+
+                <!-- Botão para cadastrar o colaborador -->
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <!-- Exibe o número de colaboradores cadastrados -->
+            <h2 id="numeroColaboradores">5 colaboradores cadastrados</h2>
+
+            <!-- Tabela para exibir os colaboradores cadastrados -->
+            <table class="colaboradores-tabela">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data de Admissão</th>
+                        <th>Nível de Acesso</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <!-- Corpo da tabela com os colaboradores cadastrados -->
+                <tbody id="tbody">
+                    <tr>
+                        <!-- Primeira linha da tabela -->
+                        <th scope="row">1</th>
+                        <td>Fernanda Lima</td>
+                        <td>Fernanda@-ifood.com</td>
+                        <td>31/05/2024</td>
+                        <td>Administrador</td>
+                        <td>
+                            <!-- Botão para abrir o menu de opções do item -->
+                            <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown"></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Editar</a></li>
+                                <li><a class="dropdown-item">Excluir</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Segunda linha da tabela -->
+                        <th scope="row">2</th>
+                        <td>Maria Silva</td>
+                        <td>Maria@-ifood.com</td>
+                        <td>31/05/2024</td>
+                        <td>Colaborador</td>
+                        <td>
+                            <!-- Botão para abrir o menu de opções do item -->
+                            <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown"></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Editar</a></li>
+                                <li><a class="dropdown-item">Excluir</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Terceira linha da tabela -->
+                        <th scope="row">3</th>
+                        <td>João Oliveira</td>
+                        <td>João@-ifood.com</td>
+                        <td>31/05/2024</td>
+                        <td>Colaborador</td>
+                        <td>
+                            <!-- Botão para abrir o menu de opções do item -->
+                            <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown"></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Editar</a></li>
+                                <li><a class="dropdown-item">Excluir</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Quarta linha da tabela -->
+                        <th scope="row">4</th>
+                        <td>Ana Souza</td>
+                        <td>Ana.souza@-ifood.com</td>
+                        <td>31/05/2024</td>
+                        <td>Colaborador</td>
+                        <td>
+                            <!-- Botão para abrir o menu de opções do item -->
+                            <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown"></i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Editar</a></li>
+                                <li><a class="dropdown-item">Excluir</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <!-- fim do corpo do site -->

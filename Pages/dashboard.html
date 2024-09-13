@@ -213,44 +213,62 @@
     <main class="corpo-site">
         <div class="container cimaDashboard">
             <div class="row">
+                <!-- Barra de pesquisa para telas menores -->
                 <div class="col-12 col-md-12 col-lg-7 pesquisa2">
                     <div class="input-group pesquisaMd">
+                        <!-- Campo de entrada para pesquisa -->
                         <input type="text" class="form-control textoPesquisa2" placeholder="Pesquise no nosso Cashboard"
                             aria-label="Pesquise no nosso Cashboard" aria-describedby="button-addon2">
+                        <!-- Botão de pesquisa -->
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
+                <!-- Seção de boas-vindas -->
                 <div class="bemVindo col-12 col-md-12 col-lg-7 mt-5">
+                    <!-- Coluna da esquerda com informações do usuário -->
                     <div class="col-sm-6 esquerdaBemvindo">
+                        <!-- Container para o nome do usuário e botão "Ver dados" -->
                         <div class="bvBtn">
+                            <!-- Nome do usuário -->
                             <h1 class="col-8">Seja bem-vindo, <br> Yuri Alberto!</h1>
+                            <!-- Botão para visualizar os dados do usuário -->
                             <button type="submit" id="verDados" class="btn verDados col-4">ver dados ></button>
                         </div>
+                        <!-- Exibe o saldo do usuário -->
                         <div class="textosBV">
                             <h1>Saldo: R$50,00</h1>
                         </div>
+                        <!-- Mensagem de boas-vindas -->
                         <div class="textosBV2">
                             <h2>Gerencie suas finanças, <br> seu bolso também merece uma refeição</h2>
                         </div>
                     </div>
+                    <!-- Coluna da direita com ilustração -->
                     <div class="col-sm-5 offset-1 direitaBemvindo">
                         <img src="../Imagens/Dashboard/ilustraçãoBemvindo.svg">
                     </div>
                 </div>
 
+                <!-- Seção do perfil da empresa -->
                 <div class="perfil col-12 col-md-12 col-lg-4 offset-lg-1 mt-5">
+                    <!-- Cabeçalho da seção do perfil -->
                     <div class="cimaPerfil">
                         <h1>Perfil da empresa</h1>
+                        <!-- Botão para editar o perfil -->
                         <i class="bi bi-pencil ms-auto"></i>
                     </div>
+                    <!-- Conteúdo da seção do perfil -->
                     <div class="container baixoPerfil mt-4">
+                        <!-- Coluna da esquerda com informações da empresa -->
                         <div class="esquerdaPerfil">
                             <h2>Restaurante ABC</h2>
+                            <!-- Localização da empresa -->
                             <div class="localizacao">
                                 <img src="../Imagens/Dashboard/pinoLocalizacao.svg">
                                 <p class="my-auto ms-2">Rua ABC, n. 11, Bairro ABC</p>
                             </div>
+                            <!-- Informações adicionais da empresa -->
                             <div class="dadosRestaurante">
                                 <div>
                                     <p class="pt-2 mb-2">Desde</p>
@@ -263,19 +281,26 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Imagem do restaurante -->
                         <img class="img-fluid" src="../Imagens/Dashboard/fotoRestaurante.svg">
                     </div>
                 </div>
+                <!-- Barra de pesquisa para telas maiores -->
                 <div class="col-12 col-md-12 col-lg-7 mt-5 pesquisa">
                     <div class="input-group pesquisaLg">
+                        <!-- Campo de entrada para pesquisa -->
                         <input type="text" class="form-control textoPesquisa" placeholder="Pesquise no nosso Cashboard"
                             aria-label="Pesquise no nosso Cashboard" aria-describedby="button-addon2">
+                        <!-- Botão de pesquisa -->
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
+                <!-- Seção para selecionar o mês -->
                 <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 mes">
+                    <!-- Exibe o mês atual -->
                     <h1 class="mb-1" id="mesTexto">Maio de 2024</h1>
+                    <!-- Dropdown para seleção do mês -->
                     <select class="form-select" id="tipoMes" required>
                         <option selected disabled>Mês</option>
                         <option value="Janeiro">Janeiro</option>
@@ -296,11 +321,15 @@
         </div>
         </div>
 
+        <!-- Seção com os gráficos -->
         <div class="container baixoDashboard mb-3">
             <div class="row">
+                <!-- Gráfico de colunas para receitas e despesas -->
                 <div class="col-12 col-md-12 col-lg-3 mt-5 receitasDespesas">
+                    <!-- Cabeçalho do gráfico -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Receitas x Despesas</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana1" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -309,19 +338,25 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Container do gráfico -->
                     <div class="mb-2 colunaGraficoContainer">
+                        <!-- Canvas para o gráfico de colunas -->
                         <div class="colunaGrafico">
                             <canvas id="colunaGrafico"></canvas>
                         </div>
+                        <!-- Legenda do gráfico de colunas -->
                         <div class="legendaColunaGrafico">
                             <div><span class="legendaColunaCor" style="background-color: #51C13F;"></span> Número de receitas</div>
                             <div><span class="legendaColunaCor" style="background-color: #FF001B;"></span> Número de despesas</div>
                         </div>
                     </div>
                 </div>
+                <!-- Gráfico de linhas para volume de pedidos -->
                 <div class="col-12 col-md-12 col-lg-3 offset-lg-1 mt-5 volumePedidos">
+                    <!-- Cabeçalho do gráfico -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Volume de Pedidos</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana2" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -330,15 +365,20 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Container do gráfico -->
                     <div class="linhaGraficoContainer">
+                        <!-- Canvas para o gráfico de linhas -->
                         <div class="linhaGrafico mt-3">
                             <canvas id="linhaGrafico"></canvas>
                         </div>
                     </div>
                 </div>
+                <!-- Seção para produtos mais e menos vendidos -->
                 <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 produtoMaisMenos">
+                    <!-- Cabeçalho da seção -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Produto mais vendido</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana3" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -347,29 +387,41 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Seção para o produto mais vendido -->
                     <div class="maisVendido">
+                        <!-- Imagem do produto mais vendido -->
                         <img src="../Imagens/Dashboard/mais_vendido.svg" class="img-fluid">
+                        <!-- Informações do produto mais vendido -->
                         <div class="esquerdaVendas">
                             <h2>Costela</h2>
                             <h3>500 unidades</h3>
                         </div>
+                        <!-- Valor do produto mais vendido -->
                         <h2>R$80,00</h2>
                     </div>
+                    <!-- Cabeçalho da seção -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Produto menos vendido</h1>
                     </div>
+                    <!-- Seção para o produto menos vendido -->
                     <div class="menosVendido mb-1">
+                        <!-- Imagem do produto menos vendido -->
                         <img src="../Imagens/Dashboard/menos_vendido.svg" class="img-fluid">
+                        <!-- Informações do produto menos vendido -->
                         <div class="esquerdaVendas">
                             <h2>Sorvete</h2>
                             <h3>20 unidades</h3>
                         </div>
+                        <!-- Valor do produto menos vendido -->
                         <h2>R$50,00</h2>
                     </div>
                 </div>
+                <!-- Gráfico de pizza para despesas por categoria -->
                 <div class="col-12 col-md-12 col-lg-4 mt-5 despesasCategoria">
+                    <!-- Cabeçalho do gráfico -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Despesas por categoria</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana4" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -378,8 +430,11 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Container do gráfico -->
                     <div class="pizzaGraficoContainer">
+                        <!-- Canvas para o gráfico de pizza -->
                         <canvas class="pizzaGrafico" id="pizzaGrafico"></canvas>
+                        <!-- Legenda do gráfico de pizza -->
                         <div class="legendaPizzaGrafico">
                             <div><span class="legendaPizzaCor" style="background-color: #FF001B;"></span> Contas</div>
                             <div><span class="legendaPizzaCor" style="background-color: #B2323F;"></span> Transporte</div>
@@ -389,9 +444,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Gráfico de barras horizontais para número de avaliações -->
                 <div class="col-12 col-md-12 col-lg-4 offset-lg-1 mt-5 numeroAvaliacoes">
+                    <!-- Cabeçalho do gráfico -->
                     <div class="cimaGraficos">
                         <h1 class="mb-1">Número de avaliações</h1>
+                        <!-- Dropdown para selecionar a semana -->
                         <select class="form-select" id="tipoSemana5" required>
                             <option selected disabled>Semanas</option>
                             <option value="Semana 1">Semana 1</option>
@@ -400,12 +458,15 @@
                             <option value="Semana 4">Semana 4</option>
                         </select>
                     </div>
+                    <!-- Container do gráfico -->
                     <div class="barraGraficoContainer">
+                        <!-- Canvas para o gráfico de barras horizontais -->
                         <div class="barraGrafico">
                             <canvas id="barraGrafico"></canvas>
                         </div>
                     </div>
                 </div>
+                <!-- Botão para inserir extrato -->
                 <div class="col-12 col-md-12 col-lg-2 offset-lg-1 my-lg-auto extrato mt-5">
                     <label for="inputExtrato" class="adicionar">
                         <a href="../Pages/transacoes.html">
@@ -426,6 +487,7 @@
             </div>
         </div>
     </main>
+    
     <!-- link javascript da página -->
     <script src="../JS/dashboard.js"></script>
     

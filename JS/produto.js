@@ -1,6 +1,7 @@
 let categoriaCount = 3;
 let itemCount = 1;
 
+// Função para abrir o modal de alterar a ordem do cardápio
 function abrirModalAlterarOrdem() {
   const modal = new bootstrap.Modal(document.getElementById('modalAlterarOrdem'));
   modal.show();
@@ -9,6 +10,7 @@ function abrirModalAlterarOrdem() {
   atualizarListaItens();
 }
 
+// Função para atualizar a lista de categorias no modal
 function atualizarListaCategorias() {
   const listaCategorias = document.getElementById('listaCategorias');
   listaCategorias.innerHTML = '';
@@ -28,6 +30,7 @@ function atualizarListaCategorias() {
   });
 }
 
+// Função para atualizar a lista de itens no modal
 function atualizarListaItens() {
   const listaItens = document.getElementById('listaItens');
   listaItens.innerHTML = '';
@@ -50,11 +53,13 @@ function atualizarListaItens() {
   });
 }
 
+// Função para abrir o modal de adicionar categoria
 function abrirModalAdicionarCategoria() {
   const modal = new bootstrap.Modal(document.getElementById('modalAdicionarCategoria'));
   modal.show();
 }
 
+// Função para inserir uma nova categoria
 function inserirCategoria() {
   // Obtém o nome da nova categoria do input
   const nomeCategoria = document.getElementById('nomeCategoria').value;
@@ -108,6 +113,7 @@ function inserirCategoria() {
   document.getElementById('nomeCategoria').value = '';
 }
 
+// Função para editar o nome da categoria
 function editarNomeCategoria(idCategoria) {
   // Seleciona o elemento <span> com o id da categoria
   const nomeCategoria = document.getElementById(idCategoria);
@@ -124,6 +130,7 @@ function editarNomeCategoria(idCategoria) {
   }
 }
 
+// Função para abrir o modal de adicionar item
 function abrirModalAdicionarItem(idCategoria) {
   // Obtem o nome da categoria do elemento
   const categoria = document.getElementById(idCategoria);
@@ -137,6 +144,7 @@ function abrirModalAdicionarItem(idCategoria) {
   modal.show();
 }
 
+// Função para alternar o status do item
 function toggleStatus(checkbox) {
   const label = checkbox.nextElementSibling;
   if (checkbox.checked) {
@@ -146,6 +154,7 @@ function toggleStatus(checkbox) {
   }
 }
 
+// Função para excluir uma categoria
 function excluirCategoria(idCategoria) {
   // Atualiza o texto da modal
   const textoConfirmacao = document.getElementById('textoConfirmacaoCategoria');
@@ -164,6 +173,7 @@ function excluirCategoria(idCategoria) {
   });
 }
 
+// Função para abrir o modal de editar item
 function abrirModalEditarItem(idItem) {
   // Seleciona a linha do item na tabela
   const linhaItem = document.getElementById(idItem).closest('tr');
@@ -176,6 +186,7 @@ function abrirModalEditarItem(idItem) {
   modal.show();
 }
 
+// Função para excluir um item
 function excluirItem(idItem) {
   // Atualiza o texto da modal
   const textoConfirmacao = document.getElementById('textoConfirmacaoItem');

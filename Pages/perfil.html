@@ -211,6 +211,181 @@
 
     <!-- começo do corpo do site -->
     <main class="corpo-site">
+        <!-- Define o container principal da página com flexbox para centralizar o conteúdo -->
+        <div class="d-flex justify-content-center align-items-left flex-column" id="pagina-perfil">
+            <!-- Define a linha principal da página -->
+            <div class="row" id="linha">
+                <!-- Menu lateral da página -->
+                <div class="col-sm-10 col-md-10 col-lg-1 p-1" id="sidebar">
+                    <!-- Placeholder para o menu lateral -->
+                    <div id="nav-placeholder">
+                    </div>
+                </div>
+
+                <!-- Seção principal da página -->
+                <div class="col-sm-10 col-md-10 col-lg-11 p-4" id="basebox">
+                    <!-- Define o container principal da seção com flexbox para centralizar o conteúdo -->
+                    <div class="d-flex justify-content-left align-items-left flex-column">
+                        <!-- Define a linha principal da seção -->
+                        <div class="row">
+                            <!-- Seção das informações do usuário -->
+                            <div
+                                class="col-sm-10 col-md-10 col-lg-5 p-4 d-flex justify-content-left align-items-left flex-column">
+                                <!-- Mensagem de boas-vindas -->
+                                <div class="informacoes">
+                                    <h1 id="info-usuario">Olá, Usuário!</h1>
+                                </div>
+                                <!-- Formulário para edição das informações do usuário -->
+                                <form>
+                                    <!-- Container para o avatar do usuário -->
+                                    <div class="mb-5" id="avatar">
+                                    </div>
+                                    <!-- Campo de entrada para a descrição do usuário -->
+                                    <div class="mb-4" id="descricao">
+                                        <label for="desc">Adicione uma descrição:</label>
+                                        <textarea id="desc" name="desc" rows="5" cols="33">
+									</textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Seção das informações de cadastro -->
+                            <div class="col-sm-10 col-md-10 col-lg-5 p-4">
+                                <!-- Título da seção de cadastro -->
+                                <div class="informacoes">
+                                    <h1 class="mb-5" id="info-cadastro">Informações de cadastro</h1>
+                                </div>
+                                <!-- Formulário para visualização das informações de cadastro -->
+                                <form>
+                                    <!-- Campo de entrada para o estabelecimento -->
+                                    <div class="mb-4">
+                                        <label class="form-label">Estabelecimento</label>
+                                        <input type="text" class="form-control" id="estabelecimento" placeholder=""
+                                            disabled>
+                                    </div>
+                                    <!-- Campo de entrada para o email -->
+                                    <div class="mb-4">
+                                        <label class="form-label">E-mail</label>
+                                        <input type="text" class="form-control" id="email" placeholder="" disabled>
+                                    </div>
+                                    <!-- Campo de entrada para o telefone -->
+                                    <div class="mb-4">
+                                        <label class="form-label">Telefone</label>
+                                        <input type="text" class="form-control" id="telefone" placeholder="" disabled>
+                                    </div>
+                                    <!-- Campo de entrada para o endereço completo -->
+                                    <div class="mb-4">
+                                        <label class="form-label">Endereço completo</label>
+                                        <textarea class="form-control" rows="3" placeholder="" disabled></textarea>
+                                    </div>
+                                </form>
+                                <!-- Botão para editar as informações de cadastro -->
+                                <div
+                                    class="form-floating d-flex justify-content-center align-items-center flex-column m">
+                                    <button type="button" class="btn" href="#" role="link" id="linkeditar">Editar
+                                        Informações</a>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para editar as informações de cadastro -->
+        <div class="modal fade" id="modalEditarCadastro" tabindex="-1" aria-labelledby="modalEditarCadastroLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- Título do modal -->
+                        <h5 class="modal-title" id="modalEditarCadastroLabel">Editar Informações de Cadastro</h5>
+                        <!-- Botão para fechar o modal -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulário para edição das informações de cadastro -->
+                        <form id="formEditarCadastro">
+                            <div class="row">
+                                <!-- Campo de entrada para o tipo de estabelecimento -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="tipoEstabelecimento" class="form-label">Tipo do
+                                        Estabelecimento <span class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="tipoEstabelecimento"
+                                        placeholder="ex: Restaurante, mercado, loja etc." required>
+                                </div>
+                                <!-- Campo de entrada para o nome do estabelecimento -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="nomeEstabelecimento" class="form-label">Nome do
+                                        Estabelecimento <span class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="nomeEstabelecimento" placeholder=""
+                                        required>
+                                </div>
+                                <!-- Campo de entrada para o CEP -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="cep" class="form-label">CEP <span class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="cep" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para o logradouro -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="logradouro" class="form-label">Logradouro <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="logradouro" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para o telefone -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="telefone" class="form-label">Telefone <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="telefone" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para o bairro -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="bairro" class="form-label">Bairro <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="bairro" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para a cidade -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="cidade" class="form-label">Cidade <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="cidade" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para o estado -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="estado" class="form-label">Estado <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="text" class="form-control" id="estado" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para o complemento -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="complemento" class="form-label">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento" placeholder="">
+                                </div>
+                                <!-- Campo de entrada para a senha -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="senha" class="form-label">Senha <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="password" class="form-control" id="senha" placeholder="" required>
+                                </div>
+                                <!-- Campo de entrada para confirmar a senha -->
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="repetirSenha" class="form-label">Repetir Senha <span
+                                            class="obrigatorio">*</span></label>
+                                    <input type="password" class="form-control" id="repetirSenha" placeholder=""
+                                        required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Botões para cancelar e concluir a edição -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" form="formEditarCadastro"
+                            id="btnSalvar">Concluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- fim do corpo do site -->

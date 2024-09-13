@@ -1,3 +1,5 @@
+/* --------------------------- CONTEUDO DO CORPO DO SITE --------------------------- */
+/* ----------------------------- GERAL -----------------------------*/
 .corpo-site {
     float: right;
 }
@@ -8,10 +10,12 @@
     align-items: center;
 }
 
+/* ----------------------------- TITULO -----------------------------*/
 .botao_categoria {
     margin-left: 50px;
 }
 
+/* ----------------------------- TABELAS -----------------------------*/
 .categoria {
     display: flex;
 }
@@ -23,6 +27,10 @@
 
 .table {
     border-radius: 10px;
+}
+
+.table th {
+    background-color: #f4f4f4;
 }
 
 .table th {
@@ -71,6 +79,7 @@
     gap: 10px;
 }
 
+/* ----------------------------- RESPONSIVIDADE -----------------------------*/
 @media (max-width: 845px) {
     .corpo-site {
         float: none;
