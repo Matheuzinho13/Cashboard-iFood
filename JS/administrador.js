@@ -22,7 +22,7 @@ document.querySelector('#formColaboradores').addEventListener('submit', function
     function obterNomeCompleto() {
         const nome = document.querySelector('#nomeColaborador').value;
         const sobrenome = document.querySelector('#sobrenomeColaborador').value;
-        return `${nome} ${sobrenome}`; // Concatena nome e sobrenome com espaço
+        return `${nome} ${sobrenome}`;
     }
 
     // Define os campos a serem adicionados na tabela

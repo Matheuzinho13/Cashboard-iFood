@@ -33,13 +33,14 @@ body{
     }
 }
 
-/* conteúdo do corpo do site */
-
+/* --------------------------- CONTEUDO DO CORPO DO SITE --------------------------- */
+/* --------------------------- TITULO --------------------------- */
 h1 {
     font-size: 1.5rem;
     font-weight: 500   ;
 }
 
+/* --------------------------- CONTAINER FORMULARIO --------------------------- */
 .form-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -54,8 +55,7 @@ h1 {
     font-weight: 500;
 }
 
-.form-container input,
-.form-container select {
+.form-container input, .form-container select {
     font-size: 1rem;
     margin-top: 5px;
     padding: 0.3rem 1rem;
@@ -83,12 +83,14 @@ h1 {
     background-color: #d00016;
 }
 
+/* --------------------------- COLABORADORES CADASTRADOS --------------------------- */
 h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
     font-weight: 500   ;
 }
 
+/* --------------------------- CONTAINER PRINCIPAL --------------------------- */
 .colab-container {
     padding: 5%;
     display: flex;
@@ -96,6 +98,7 @@ h2 {
     flex-wrap: wrap;
 }
 
+/* --------------------------- TABELA --------------------------- */
 .colaboradores-tabela {
     width: 100%;
     border-collapse: collapse;

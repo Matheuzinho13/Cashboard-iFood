@@ -232,16 +232,20 @@
             <div class="col-12 col-md-6">
               <h2 class="titulo" id="nome-categoria">
                 <span id="nome-categoria-texto">Menu Principal</span>
+                <!-- Botão para editar o nome da categoria -->
                 <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-categoria-texto')"></i>
               </h2>
             </div>
             <div class="categoria col-12 col-md-4 justify-content-between">
+              <!-- Botão para adicionar item à categoria -->
               <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-1')">+ Item</button>
+              <!-- Toggle para ativar/desativar a categoria -->
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-1"
                   onchange="toggleStatus(this)" checked>
                 <label class="form-check-label" for="categoria-status-1">Ativo</label>
               </div>
+              <!-- Botão para excluir a categoria -->
               <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-1')"></i>
             </div>
           </div>
@@ -260,11 +264,13 @@
             <tbody>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/costela.png" alt="Costela" class="me-2">Costela
                 </td>
                 <td>Uma deliciosa costela bovina, assada lentamente para garantir a suculência e o sabor intenso. A
                   carne se desfaz na boca, proporcionando uma experiência culinária inesquecível.</td>
                 <td>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-2"
                       onchange="toggleStatus(this)" checked>
@@ -273,6 +279,7 @@
                 </td>
                 <td><span class="valor">R$ 49,99</span></td>
                 <td>
+                  <!-- Botão para abrir o menu de opções do item -->
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-1"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-1">
                     <li><a class="dropdown-item" onclick="abrirModalEditarItem('dropdownMenuButton-1')">Editar</a></li>
@@ -282,12 +289,14 @@
               </tr>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/legumes_a_vapor.png" alt="Legumes a Vapor" class="me-2">Legumes
                   a Vapor
                 </td>
                 <td>Uma seleção colorida de legumes frescos, cozidos a vapor para preservar seus nutrientes e sabores
                   naturais. Uma opção leve e saudável que complementa qualquer prato.</td>
                 <td>
+                  <!-- Icone do tipo do item -->
                   <div class="icon_tipo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                       <path
@@ -304,6 +313,7 @@
                         style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
                     </svg>
                   </div>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-3"
                       onchange="toggleStatus(this)" checked>
@@ -311,6 +321,7 @@
                   </div>
                 </td>
                 <td><span class="valor">R$ 24,99</span></td>
+                <!-- Botão para abrir o menu de opções do item -->
                 <td>
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-2"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-2">
@@ -321,11 +332,13 @@
               </tr>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/fritas.png" alt="Fritas" class="me-2">Fritas
                 </td>
                 <td>Batatas crocantes por fora e macias por dentro, fritas em óleo quente até atingirem a perfeição
                   dourada. Servidas quentes e salgadas, são o acompanhamento perfeito para qualquer refeição.</td>
                 <td>
+                  <!-- Icone do tipo do item -->
                   <div class="icon_tipo">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                       <path
@@ -342,6 +355,7 @@
                         style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
                     </svg>
                   </div>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-4"
                       onchange="toggleStatus(this)">
@@ -350,6 +364,7 @@
                 </td>
                 <td><span class="valor">R$ 21,99</span></td>
                 <td>
+                  <!-- Botão para abrir o menu de opções do item -->
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-3"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-3">
                     <li><a class="dropdown-item" onclick="abrirModalEditarItem('dropdownMenuButton-3')">Editar</a></li>
@@ -369,16 +384,20 @@
             <div class="col-12 col-md-6">
               <h2 class="titulo" id="nome-sobremesa">
                 <span id="nome-sobremesa-texto">Sobremesa</span>
+                <!-- Botão para editar o nome da categoria -->
                 <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-sobremesa-texto')"></i>
               </h2>
             </div>
             <div class="categoria col-12 col-md-4 justify-content-between">
+              <!-- Botão para adicionar item à categoria -->
               <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-2')">+ Item</button>
+              <!-- Toggle para ativar/desativar a categoria -->
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-5"
                   onchange="toggleStatus(this)">
                 <label class="form-check-label" for="categoria-status-5">Inativo</label>
               </div>
+              <!-- Botão para excluir a categoria -->
               <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-2')"></i>
             </div>
           </div>
@@ -397,12 +416,14 @@
             <tbody>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/havanna_thunder.png" alt="Havanna Thunder" class="me-2">Havanna
                   Thunder
                 </td>
                 <td>Um brownie de chocolate rico e denso, coberto com uma generosa bola de sorvete de baunilha cremoso.
                   Uma combinação clássica que é ao mesmo tempo refrescante e indulgente.</td>
                 <td>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-6"
                       onchange="toggleStatus(this)">
@@ -411,6 +432,7 @@
                 </td>
                 <td><span class="valor">R$ 26,99</span></td>
                 <td>
+                  <!-- Botão para abrir o menu de opções do item -->
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-4"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-4">
                     <li><a class="dropdown-item" onclick="abrirModalEditarItem('dropdownMenuButton-4')">Editar</a></li>
@@ -430,16 +452,20 @@
             <div class="col-12 col-md-6">
               <h2 class="titulo" id="nome-bebidas">
                 <span id="nome-bebidas-texto">Bebidas</span>
+                <!-- Botão para editar o nome da categoria -->
                 <i class="bi bi-pencil-square ms-3 text-danger" onclick="editarNomeCategoria('nome-bebidas-texto')"></i>
               </h2>
             </div>
             <div class="categoria col-12 col-md-4 justify-content-between">
+              <!-- Botão para adicionar item à categoria -->
               <button class="btn btn-outline-danger" onclick="abrirModalAdicionarItem('categoria-3')">+ Item</button>
+              <!-- Toggle para ativar/desativar a categoria -->
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-7"
                   onchange="toggleStatus(this)" checked>
                 <label class="form-check-label" for="categoria-status-7">Ativo</label>
               </div>
+              <!-- Botão para excluir a categoria -->
               <i class="bi bi-trash text-danger me-lg-4" onclick="excluirCategoria('categoria-3')"></i>
             </div>
           </div>
@@ -458,6 +484,7 @@
             <tbody>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/chopp_colorado.png" alt="Chopp Colorado" class="me-2">Chopp
                   Colorado
                 </td>
@@ -486,6 +513,7 @@
                         style="cursor: move;" text-anchor="middle" x="254" xml:space="preserve" y="488.6">VEGANO</text>
                     </svg>
                   </div>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-8"
                       onchange="toggleStatus(this)" checked>
@@ -494,6 +522,7 @@
                 </td>
                 <td><span class="valor">R$ 11,99</span></td>
                 <td>
+                  <!-- Botão para abrir o menu de opções do item -->
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-5"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-5">
                     <li><a class="dropdown-item" onclick="abrirModalEditarItem('dropdownMenuButton-5')">Editar</a></li>
@@ -503,12 +532,14 @@
               </tr>
               <tr>
                 <td>
+                  <!-- Imagem do item -->
                   <img src="../Imagens/Cadastro Produto/super_milkshake.png" alt="Super Milkshake" class="me-2">Super
                   Milkshake
                 </td>
                 <td>Um milkshake cremoso e espesso, disponível nos sabores de chocolate ou morango. Feito com sorvete
                   premium e servido com um canudo largo para que você possa saborear cada gole.</td>
                 <td>
+                  <!-- Toggle para ativar/desativar o item -->
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="categoria-status-9"
                       onchange="toggleStatus(this)">
@@ -517,6 +548,7 @@
                 </td>
                 <td><span class="valor">R$ 14,99</span></td>
                 <td>
+                  <!-- Botão para abrir o menu de opções do item -->
                   <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" id="dropdownMenuButton-6"></i>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-6">
                     <li><a class="dropdown-item" onclick="abrirModalEditarItem('dropdownMenuButton-6')">Editar</a></li>

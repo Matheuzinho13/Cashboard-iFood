@@ -1,13 +1,17 @@
+/* --------------------------- CONTEUDO DO CORPO DO SITE --------------------------- */
+/* Define a imagem de fundo do corpo da página */
 body {
     background-image: url("../Imagens/Cadastro Empresa/background_cadastro2.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
 
+/* Estilos para o container principal da tela */
 #basebox {
     display: flex;
 }
 
+/* Estilos para o título do formulário */
 #infoempresa {
     text-wrap: wrap;
     margin-top: 4vh;
@@ -15,6 +19,7 @@ body {
     text-align: center;
 }
 
+/* Estilos para o container do formulário */
 #cadastrobox {
     background-color: white;
     margin-top: 4vh;
@@ -22,16 +27,19 @@ body {
     margin-left: 4vh;
 }
 
+/* Estilos para o botão "Continuar" */
 #linkcontinuar {
     margin-bottom: 4vh;
 }
 
+/* Estilos para a linha das logos */
 #linhalogos {
     display: flex;
     margin-left: 1vh;
     margin-right: 1vh;
 }
 
+/* Estilos para a logo do iFood */
 #logoifood {
     width: 70%;
     padding-left: 0%;
@@ -39,6 +47,7 @@ body {
     margin-left: 10%;
 }
 
+/* Estilos para a logo do Cashboard */
 #logocashboard {
     width: 70%;
     padding-left: 0%;
@@ -46,6 +55,7 @@ body {
     margin-right: 10%;
 }
 
+/* Estilos responsivos para a tela */
 @media (max-height:800px) {
     #basebox {
         min-height: 1024px;

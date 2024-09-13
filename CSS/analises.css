@@ -34,7 +34,7 @@ body{
     }
 }
 
-/* conteúdo do corpo do site */
+/* --------------------------- CONTEUDO DO CORPO DO SITE --------------------------- */
 /* --------------------------- CIMA DO SITE --------------------------- */
 .cimaAnalises {
     display: flex;
@@ -267,6 +267,7 @@ body{
     width: 45.5%;
 }
 
+/* --------------------- RECEITAS X DESPESAS ANO -------------------- */
 .colunaGrafico {
     display: flex;
     justify-content: center;
@@ -292,6 +293,7 @@ body{
     margin-right: 10px;
 }
 
+/* --------------------- RECEITAS X DESPESAS MÊS -------------------- */
 .barraGrafico { 
     display: flex;
     justify-content: center;
@@ -301,6 +303,7 @@ body{
     width: 70%;
 }
 
+/* --------------------- DIREITA BAIXO -------------------- */
 /* ------------------------- VOLUME DOS PEDIDOS ----------------------- */
 .volumePedidos {
     background-color: var(--branco);

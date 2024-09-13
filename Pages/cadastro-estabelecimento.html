@@ -23,49 +23,63 @@
 </head>
 
 <body>
+    <!-- Define o container principal da página com flexbox para centralizar o conteúdo -->
     <div class="vh-100 d-flex justify-content-center align-items-center flex-column" id="basebox">
+        <!-- Define o container do formulário de cadastro com responsividade -->
         <div class="col-sm-10 col-md-8 col-lg-5 p-4 shadow rounded " id="cadastrobox">
+            <!-- Define a linha principal com responsividade -->
             <div class="row">
+                <!-- Título do formulário -->
                 <h1 id="infoestabelecimento">Insira as informações do estabelecimento</h1>
+                <!-- Define a coluna para os campos do lado esquerdo -->
                 <div class="col">
+                    <!-- Formulário para os campos do lado esquerdo -->
                     <form>
+                        <!-- Campo de entrada para o Tipo de Estabelecimento -->
                         <div class="mb-4">
                             <label class="form-label">Tipo do estabelecimento*</label>
                             <input type="text" class="form-control" id="tipoestabelecimento" placeholder="ex.: Restaurante, mercado, loja etc.">
                         </div>
+                        <!-- Campo de entrada para o CEP -->
                         <div class="mb-4">
                             <label class="form-label">CEP*</label>
                             <input type="text" class="form-control" id="cep" placeholder="">
                         </div>
+                        <!-- Campo de entrada para a Cidade -->
                         <div class="mb-4">
                             <label class="form-label">Cidade*</label>
                             <input type="text" class="form-control" id="cidade" placeholder="">
                         </div>
+                        <!-- Campo de entrada para o Estado -->
                         <div class="mb-4">
                             <label class="form-label">Estado*</label>
                             <input type="text" class="form-control" id="estado" placeholder="">
                         </div>
                     </form>
                 </div>
+                <!-- Define a coluna para os campos do lado direito -->
                 <div class="col">
+                    <!-- Formulário para os campos do lado direito -->
                     <form>
+                        <!-- Campo de entrada para o Bairro -->
                         <div class="mb-4">
                             <label class="form-label">Bairro*</label>
                             <input type="text" class="form-control" id="bairro" placeholder="">
                         </div>
+                        <!-- Campo de entrada para o Logradouro -->
                         <div class="mb-4">
                             <label class="form-label">Logradouro*</label>
                             <input type="text" class="form-control" id="logradouro" placeholder="">
                         </div>
+                        <!-- Campo de entrada para o Complemento -->
                         <div class="mb-4">
                             <label class="form-label">Complemento</label>
                             <input type="text" class="form-control" id="complemento" placeholder="" >
                         </div>
-
-
                     </form>
                 </div>
             </div>
+            <!-- Define o botão "Continuar" -->
             <div class="form-floating d-flex justify-content-center align-items-center flex-column m">
                 <a class="btn btn-secondary btn-lg w-25 justify-content-center btn-danger mt-4 mb-4" href="#" role="link" id="linkcontinuar">Continuar</a>
             </div>
