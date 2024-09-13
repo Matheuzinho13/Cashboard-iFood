@@ -129,3 +129,29 @@ h2 {
 .colaboradores-tabela tbody td:hover {
     background-color: var(--cinza);
 }
+
+
+@media (max-width: 760px) {
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .form-container :nth-child(6) {
+        margin-top: 1rem;
+    }
+
+    table th, td {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    table td:nth-child(3), th:nth-child(3), td:nth-child(4), th:nth-child(4) {
+        display: none;
+    }
+}
