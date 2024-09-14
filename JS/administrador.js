@@ -30,7 +30,7 @@ document.querySelector('#formColaboradores').addEventListener('submit', function
         { campo: obterNomeCompleto(), label: 'Nome' }, // Nome completo como string
         { campo: document.querySelector('#emailColaborador').value, label: 'Email' }, // Valor direto do input
         { campo: document.querySelector('#dataAsmissão').value, label: 'Data de Admissão' }, // Valor direto do input
-        { campo: document.querySelector('#nivelColaborador').value, label: 'Nível de Acesso' } // Valor direto do input
+        { campo: document.querySelector('#nivelColaborador').value, label: 'Nível de Acesso' }, // Valor direto do input
     ];
 
     // criar a tr/linha para cada formulário enviado
@@ -61,6 +61,19 @@ document.querySelector('#formColaboradores').addEventListener('submit', function
         // atribuir td a tr
         tr.appendChild(td);
     });
+
+    // Adicionar a célula com o dropdown de ações (três pontos)
+    const tdDropdown = document.createElement('td');
+    tdDropdown.innerHTML = `
+        <div class="dropdown">
+            <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Editar</a></li>
+                <li><a class="dropdown-item" href="#">Excluir</a></li>
+            </ul>
+        </div>
+    `;
+    tr.appendChild(tdDropdown);
 
     // adicionar a tr ao tbody
     tbody.appendChild(tr);
