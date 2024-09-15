@@ -449,3 +449,152 @@ novoCanvas.addEventListener('mousemove', (event) => {
         }
     });
 });
+
+
+// ----------------------- EVENTOS DE CLIQUE DA LEGENDA -----------------------
+
+// Selecionando os elementos da legenda
+const contas = document.getElementById('contas-legenda');
+const transporte = document.getElementById('transporte-legenda');
+const salarios = document.getElementById('salarios-legenda');
+const estoque = document.getElementById('estoque-legenda');
+const aluguel = document.getElementById('aluguel-legenda');
+
+// Adicionando eventos de clique às legendas
+contas.addEventListener('click', () => {
+    abrirModal('Contas');
+});
+
+transporte.addEventListener('click', () => {
+    abrirModal('Transporte');
+});
+
+salarios.addEventListener('click', () => {
+    abrirModal('Sálarios');
+});
+
+estoque.addEventListener('click', () => {
+    abrirModal('Estoque');
+});
+
+aluguel.addEventListener('click', () => {
+    abrirModal('Aluguel');
+});
+
+// Função para abrir a modal
+function abrirModal(categoria) {
+    // Obtém o modal
+    const despesasModalContas = document.getElementById('despesasModalContas');
+
+    // Preenche os campos da modal de acordo com a categoria
+    const dataInicio = document.getElementById('dataInicioDspContas');
+    const dataFim = document.getElementById('dataFimDspContas');
+    const tipoFiltro = document.getElementById('tipoFiltroContas');
+    const tbodyContas = document.getElementById('tbodyContas');
+
+    // Define os dados da modal com base na categoria
+    switch (categoria) {
+        case 'Contas':
+            dataInicio.value = '2024-01-01';
+            dataFim.value = '2024-03-31';
+            tipoFiltro.innerHTML = 'Contas';
+            tbodyContas.innerHTML = `
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Contas</th>
+                    <th scope="col">R$ 600,00</th>
+                    <th scope="col">15/01/2024</th>
+                    <th scope="col">Conta de luz</th>
+                </tr>
+                <tr>
+                    <th scope="col">2</th>
+                    <th scope="col">Contas</th>
+                    <th scope="col">R$ 500,00</th>
+                    <th scope="col">20/02/2024</th>
+                    <th scope="col">Conta de água</th>
+                </tr>
+            `;
+            break;
+        case 'Transporte':
+            dataInicio.value = '2024-01-01';
+            dataFim.value = '2024-03-31';
+            tipoFiltro.innerHTML = 'Transporte';
+            tbodyContas.innerHTML = `
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Transporte</th>
+                    <th scope="col">R$ 200,00</th>
+                    <th scope="col">10/01/2024</th>
+                    <th scope="col">Combustível do carro</th>
+                </tr>
+                <tr>
+                    <th scope="col">2</th>
+                    <th scope="col">Transporte</th>
+                    <th scope="col">R$ 150,00</th>
+                    <th scope="col">15/02/2024</th>
+                    <th scope="col">Manutenção do carro</th>
+                </tr>
+            `;
+            break;
+        case 'Sálarios':
+            dataInicio.value = '2024-01-01';
+            dataFim.value = '2024-03-31';
+            tipoFiltro.innerHTML = 'Sálarios';
+            tbodyContas.innerHTML = `
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Sálarios</th>
+                    <th scope="col">R$ 3000,00</th>
+                    <th scope="col">25/01/2024</th>
+                    <th scope="col">Salário do cozinheiro</th>
+                </tr>
+                <tr>
+                    <th scope="col">2</th>
+                    <th scope="col">Sálarios</th>
+                    <th scope="col">R$ 2500,00</th>
+                    <th scope="col">10/02/2024</th>
+                    <th scope="col">Salário do garçom</th>
+                </tr>
+            `;
+            break;
+        case 'Estoque':
+            dataInicio.value = '2024-01-01';
+            dataFim.value = '2024-03-31';
+            tipoFiltro.innerHTML = 'Estoque';
+            tbodyContas.innerHTML = `
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">R$ 800,00</th>
+                    <th scope="col">05/01/2024</th>
+                    <th scope="col">Ingredientes para a semana</th>
+                </tr>
+                <tr>
+                    <th scope="col">2</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">R$ 600,00</th>
+                    <th scope="col">18/02/2024</th>
+                    <th scope="col">Materiais de limpeza</th>
+                </tr>
+            `;
+            break;
+        case 'Aluguel':
+            dataInicio.value = '2024-01-01';
+            dataFim.value = '2024-03-31';
+            tipoFiltro.innerHTML = 'Aluguel';
+            tbodyContas.innerHTML = `
+                <tr>
+                    <th scope="col">1</th>
+                    <th scope="col">Aluguel</th>
+                    <th scope="col">R$ 2000,00</th>
+                    <th scope="col">01/01/2024</th>
+                    <th scope="col">Pagamento do aluguel do mês</th>
+                </tr>
+            `;
+            break;
+    }
+
+    // Mostra a modal
+    const modal = new bootstrap.Modal(despesasModalContas);
+    modal.show();
+}

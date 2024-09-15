@@ -324,7 +324,67 @@ body{
     padding: 10px;
 }
 
+.despesaLegenda {
+    cursor: pointer; /* Adiciona o cursor de mão */
+}
+
+.despesaLegenda {
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+}
+
+.modal-dialog {
+    max-width: 53%;
+}
+
+.dataInicio input, .dataFim input, .valorInicio input, .valorFim input, .tipoFiltro select {
+    background-color: #ECEEF0;
+    border-radius: 15px;
+    border: 1px solid #8E8E8E;
+    padding: 0.3rem 2rem;
+}
+
+.dataInicio input, .dataFim input, .tipoFiltro select {
+    background-color: #565859;
+    border: 1px solid #8E8E8E;
+    color: var(--branco);   
+}
+
+.btnDespesa{
+    background-color: var(--vermelho);
+    color: var(--branco);
+    transition: all 0.2s;
+    width: 20%;
+    font-weight: 200;
+}
+
+.btnDespesa:hover {
+    background-color: transparent;
+    border: 1px solid var(--vermelho);
+    color: var(--vermelho);
+    font-weight: 200;
+}
+
+.filtroDataDsp, .filtroValorDsp{
+    display: flex;
+    justify-content: space-around;
+}
+
+#tbodyContas th {
+    font-weight: normal; /* Remove o font-weight das células */
+}
+
+
 /* ---------------------- RESPONSIVIDADE ----------------------- */
+@media (max-width: 1200px){
+    .cimaDespesa, .baixoDespesa{
+        width: 100%;
+    }
+
+    .baixoDespesa textarea{
+        width: 200%;
+    }
+}
+
 @media(max-width: 991.5px){
     body {
         min-height: 575vh;
@@ -362,6 +422,31 @@ body{
         width: 103%;
         margin-left: -10px;
     }
+
+    .cimaDespesa, .baixoDespesa{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .baixoDespesa{
+        align-items: flex-start;
+    }
+
+    .filtroDataDsp, .filtroValorDsp{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btnDespesa{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .modal-dialog {
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 455px) {
@@ -375,11 +460,7 @@ body{
 }
 
 @media (max-width: 485px) {
-    .table td:nth-child(3) {
-        display: none;
-    }
-    
-    .table th:nth-child(3) {
+    .tabelaVendido td:nth-child(3), .tabelaVendido th:nth-child(3) {
         display: none;
     }
 
@@ -391,6 +472,10 @@ body{
     .esquerda-botoes-produtoMaisMenos, .direita-botoes-produtoMaisMenos {
         align-items: none;
         gap: 10px;
+    }
+
+    .tabelaDespesas td:nth-child(4), .tabelaDespesas th:nth-child(4) {
+        display: none;
     }
 }
 
@@ -406,5 +491,9 @@ body{
 
     .nome-unidade-produtoMaisMenos h2, .nome-unidade-produtoMaisMenos h3, .tabela-td-numeros-produtoMaisMenos {
         font-size: 0.7rem;
+    }
+    
+    .tabelaDespesas td:nth-child(5), .tabelaDespesas th:nth-child(5) {
+        display: none;
     }
 }
